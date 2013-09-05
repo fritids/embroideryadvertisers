@@ -1,0 +1,53 @@
+<?php
+$subprice=$_GET['subprice'];
+$package=$_GET['package'];
+$type=$_GET['type'];
+$totalprice=$subprice;
+$return=$_GET['return'];
+
+if ($discount==NULL) { }
+else {
+
+ } ?>
+<script type="text/javascript">
+function myfunc () {
+var frm = document.getElementById("subscribe");
+frm.submit();
+}
+window.onload = myfunc;
+</script>
+
+<? if ($type=='msub') { ?>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="subscribe">
+ <input type="hidden" name="cmd" value="_xclick-subscriptions" />
+  <input type="hidden" name="business" value="tyson@tysonbrooks.net">
+  <input type="hidden" name="item_name" value="<? echo $package;?>-<?php echo date('Y').'-'.date('n').'-'.date('d');?>">
+  <input type="hidden" name="no_shipping" value="1">
+  <input type="hidden" name="return" value="<? echo $return; ?>">
+  <input type="hidden" name="cancel_return" value="https://s.tysonbrooks.net/">
+  <input type="hidden" name="a1" value="<? echo $discount;?>">
+  <input type="hidden" name="p1" value="<? echo $discterm;?>">
+  <input type="hidden" name="t1" value="M">
+  <input type="hidden" name="a3" value="<? echo $totalprice;?>">
+  <input type="hidden" name="p3" value="12">
+  <input type="hidden" name="t3" value="M">
+  <input type="hidden" name="src" value="1">
+  <input type="hidden" name="sra" value="1">
+  <input type="hidden" name="srt" value="<? echo $contract;?>">
+  <input type="hidden" name="no_note" value="1">
+  <input type="hidden" name="usr_manage" value="0">
+<center>  <input type="image" src="images/loading.gif" border="0" name="submit"></center>
+</form>
+<? } elseif ($type=='bn') { ?>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="subscribe">
+ <input type="hidden" name="cmd" value="_xclick" />
+  <input type="hidden" name="business" value="tyson@tysonbrooks.net">
+  <input type="hidden" name="item_name" value="<? echo $package;?>-<?php echo date('Y').'-'.date('n').'-'.date('d');?>">
+  <input type="hidden" name="no_shipping" value="1">
+  <input type="hidden" name="return" value="https://s.tysonbrooks.net/">
+  <input type="hidden" name="amount" value="<? echo $totalprice;?>">
+  <input type="hidden" name="discount_amount" value="<? echo $discount;?>">
+
+<center>  <input type="image" src="https://s.tysonbrooks.net/images/loading.gif" border="0" name="submit"></center>
+</form>
+<? } ?>

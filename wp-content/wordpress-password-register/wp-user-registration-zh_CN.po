@@ -1,0 +1,185 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Password Register\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-16 09:24+0800\n"
+"PO-Revision-Date: 2009-01-16 09:24+0800\n"
+"Last-Translator: 偶爱偶家 <blog.2i2j.com@gmail.com>\n"
+"Language-Team: 偶爱偶家 <blog.2i2j.com@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2\n"
+"X-Poedit-Basepath: d:/svn/wp-pwd-register\n"
+"X-Poedit-SearchPath-0: d:/svn/wp-pwd-register\n"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:98
+#: d:/svn/wp-pwd-register/wp-user-registration.php:91
+msgid "Password"
+msgstr "密码"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:92
+msgid "Word Verification"
+msgstr "认证码"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:93
+msgid "Website"
+msgstr "网址"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:94
+msgid "First Name"
+msgstr "名字"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:95
+msgid "Last Name"
+msgstr "姓氏"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:96
+msgid "Nickname"
+msgstr "昵称"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:97
+msgid "AIM"
+msgstr "AIM"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:98
+msgid "Yahoo IM"
+msgstr "Yahoo IM"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:99
+msgid "Jabber / Google Talk"
+msgstr "Jabber / Google Talk"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:56
+#: d:/svn/wp-pwd-register/wp-user-registration.php:149
+msgid "<strong>Tips</strong>: username must be in a-z0-9_.-"
+msgstr "<strong>提示</strong>: 用户名只能包含如下字符 a-z0-9_.-"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:27
+#: d:/svn/wp-pwd-register/wp-user-registration.php:178
+msgid "Password(at least 6 characters):"
+msgstr "密码(至少6个字符):"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:30
+#: d:/svn/wp-pwd-register/wp-user-registration.php:182
+msgid "Confirm Password:"
+msgstr "确认密码:"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:56
+#: d:/svn/wp-pwd-register/wp-user-registration.php:224
+msgid "<strong>ERROR</strong>: username is invalid."
+msgstr "<strong>错误</strong>: 用户名错误."
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:59
+#: d:/svn/wp-pwd-register/wp-user-registration.php:233
+msgid "<strong>ERROR</strong>: Please enter Word Verification."
+msgstr "<strong>错误</strong>: 请输入认证码."
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:56
+#: d:/svn/wp-pwd-register/wp-user-registration.php:235
+msgid "<strong>ERROR</strong>: Word Verification is invalid."
+msgstr "<strong>错误</strong>: 认证码错误"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:50
+#: d:/svn/wp-pwd-register/wp-user-registration.php:242
+msgid "<strong>ERROR</strong>: Password require at least 6 characters."
+msgstr "<strong>错误</strong>: 密码至少需要6个字符."
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:59
+#: d:/svn/wp-pwd-register/wp-user-registration.php:244
+msgid "<strong>ERROR</strong>: Please enter password."
+msgstr "<strong>错误</strong>: 请输入密码."
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:61
+#: d:/svn/wp-pwd-register/wp-user-registration.php:246
+msgid "<strong>ERROR</strong>: Please type the same password in the two password fields."
+msgstr "<strong>错误</strong>: 密码不一致, 请重新输入"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:59
+#: d:/svn/wp-pwd-register/wp-user-registration.php:255
+#, php-format
+msgid "<strong>ERROR</strong>: Please type %s"
+msgstr "<strong>错误</strong>: 请输入 %s"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:199
+#: d:/svn/wp-pwd-register/wp-user-registration.php:318
+msgid "WP User Registration Option"
+msgstr "WP Password Register Option"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:343
+msgid "Options saved"
+msgstr "选项已保存"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:345
+msgid "Plugin confriguration has been reset back to default!"
+msgstr "将配置恢复到默认值!"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:371
+msgid "Disable"
+msgstr "禁止"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:372
+msgid "Required"
+msgstr "必填"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:373
+msgid "Optional"
+msgstr "选填"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:192
+#: d:/svn/wp-pwd-register/wp-user-registration.php:383
+msgid "Update Options"
+msgstr "更新选项"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:384
+msgid "Do you really want to reset your current configuration?"
+msgstr "你想要重置选项吗?"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:384
+msgid "Reset Options"
+msgstr "重置选项"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:141
+#: d:/svn/wp-pwd-register/wp-user-registration.php:429
+msgid "No image support in this PHP server!"
+msgstr "该服务器不支持image!"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:457
+#, php-format
+msgid "New user registration on your blog %s:"
+msgstr "您的博客[%s]有新用户注册"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:89
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:97
+#: d:/svn/wp-pwd-register/wp-user-registration.php:458
+#: d:/svn/wp-pwd-register/wp-user-registration.php:470
+#, php-format
+msgid "Username: %s"
+msgstr "用户名: %s"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:90
+#: d:/svn/wp-pwd-register/wp-user-registration.php:459
+#, php-format
+msgid "E-mail: %s"
+msgstr "E-mail: %s"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:88
+#: d:/svn/wp-pwd-register/wp-user-registration.php:463
+#, php-format
+msgid "[%s] New User Registration"
+msgstr "[%s] 新用户注册"
+
+# D:/usr/Apache/www/blog/wp-content/plugins/wp-pwd-register/wp-pwd-register.php:98
+#: d:/svn/wp-pwd-register/wp-user-registration.php:471
+#, php-format
+msgid "Password: %s"
+msgstr "密码: %s"
+
+#: d:/svn/wp-pwd-register/wp-user-registration.php:474
+#, php-format
+msgid "[%s] Your username and password"
+msgstr "[%s]您的用户名和密码"
+

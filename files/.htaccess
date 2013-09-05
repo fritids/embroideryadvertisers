@@ -1,0 +1,4 @@
+<files *.zip>
+Order Deny,Allow
+Deny from all
+</files>

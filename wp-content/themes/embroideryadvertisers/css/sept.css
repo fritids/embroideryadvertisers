@@ -1,0 +1,249 @@
+/*  
+Theme Name: Embroidery Advertisers
+Theme URI: http://tysonbrooks.net
+Description: Custom theme for Embroidery Advertisers.
+Version: 2.0
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+*/
+/*body, h1, h2, h3, h4, h5, h6, address, blockquote, dd, dl, hr, form{margin: 0;padding: 0; background:#003100;}*/
+body {
+	background:#EBD215;
+}
+h1{font-family: Georgia, Sans-serif; padding: 0 0 10px 0;}
+a:link, a:visited{text-decoration: underline;color:#fff;}
+a:hover{text-decoration: none;}
+#wrapper {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:25px;
+	background:#666666;
+	width:1024px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#ffd800;
+	}
+/*==============================*/
+/*           Header             */
+/*==============================*/
+#header {
+	background:#000;
+	}
+#headerimg {
+	margin-left:auto;
+	margin-right:auto;
+	width:1024px;
+}
+#header h2 {
+	color:#FFF;
+	padding:15px 0 0 65px;
+}
+#header .sitedesc {
+	color:#FFF;
+	padding:0 0 15px 85px;
+}
+
+/*==============================*/
+/*           Slider             */
+/*==============================*/
+#featured-slider {
+	background:#000;
+	width:635px;
+	padding: 10px 35px 15px 30px;
+	margin:0 auto 15px auto;
+	float:left;	
+}
+#featured-slider p {
+	background:transparent;
+}
+/*==============================*/
+/*      Ad Space / Login        */
+/*==============================*/
+
+#membersignin {
+	background:#000;
+	float:right;
+	width:310px;
+	height:385px;
+	color:#e5e5e5;
+	padding:0 5px 5px 5px;
+}
+#membersignin p {
+	padding:0 0 0 15px;
+	font-size:18px;
+	
+}
+#signinform {
+	}
+#adspace1 {
+	float:none;
+	}
+#adspace1 img {
+	margin:2px 5px 0 0;
+	border-style:solid;
+	border-width:1px;
+	border-color:#e5e5e5;
+}
+/*==============================*/
+/*           Content            */
+/*==============================*/
+#content {
+	background:#000;
+	width:740px;
+	float:left;
+	padding-bottom:5px;
+	margin-bottom:50px;
+	font-size:18px;
+	color:#e5e5e5;
+	font-weight:bold;
+	}
+.post {	padding:5px 15px 5px 15px;}
+.post h2 { text-align:left; color:#fdee05;}
+.post h2 a {color:#fdee05;}
+.entry-title { 
+	padding:5px 0 5px 0;
+	color:#0F0;
+}
+.entry-title a{ 
+	color:#ffc318;
+}
+.entrytext {
+	padding:5px 0 10px 0;
+/*	border-bottom-style:solid;
+	border-width:1px;
+	border-color:#901806;*/
+}
+#contactad {
+	margin:0 0 0 15px;
+	}
+#socialbutton {
+	margin:0 0 0 -20px;
+	}
+/*==============================*/
+/*         Navigation           */
+/*==============================*/
+#access a:link {
+	color: #fff;
+	text-decoration: underline;
+}
+#access a:visited {
+	text-decoration: underline;
+	color: #fff;
+}
+#access a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+#access a:active {
+	text-decoration: underline;
+	color: #fff;
+}
+#access {
+	background: #000;
+	display: block;
+	float: left;
+	margin: 0 auto 1em;
+	width: 100%;
+	
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-width:1px;
+	color:#fdee05;
+}
+#access ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#access li {
+	float: left;
+	position: relative;
+}
+#access a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	text-decoration: none;
+}
+#access ul ul {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+/* First Level Link */
+#access ul ul a {
+	background: #000;
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	width: 10em;
+	height: auto;
+}
+/* First Level */
+#access li:hover > a,
+#access ul ul :hover > a {
+	background: #990000;
+}
+#access ul ul a:hover {
+	background: #cecece;
+	color:#000;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+/*==============================*/
+/*           Sidebar            */
+/*==============================*/
+#sidebar{
+	background:#000;
+	width:280px;
+	float:right;
+	font-size:16px;
+	color:#e5e5e5;
+	text-align:center;
+}
+#sidebar h2{color:#fdee05;}
+#sidebar li { list-style-type:none; }
+#sidebar ul{
+list-style-type: none;
+margin: 0;
+padding: 0 10px 0 10px;
+}
+#sidebar ul li{
+/*padding: 10px 0 10px 0;*/
+}
+#sidebar ul li h2{
+font-family: Georgia, Sans-serif;
+
+}
+#sidebar ul ul li{
+padding: 0;
+line-height: 24px;
+}
+table#wp-calendar{
+width: 100%;
+}
+/*==============================*/
+/*           Footer             */
+/*==============================*/
+#footer {
+	background:#000;
+	clear:both;
+	text-align:center;
+	padding:10px 0 10px 0;
+/*	margin:5px 0 0 0;*/
+	color:#e5e5e5;
+	}
+#footer a{ color:#fdee05;}
+/**************************************/
+.entry{padding:5px 10px 5px 10px;}.entry blockquote {padding: 15px 15px 15px 15px;}
+.alignleft {display: inline;float: left;margin-right: 1.625em;}.alignright {display: inline;	float: right;margin-left: 1.625em;}.aligncenter {clear: both;display: block;margin-left: auto;	margin-right: auto;}

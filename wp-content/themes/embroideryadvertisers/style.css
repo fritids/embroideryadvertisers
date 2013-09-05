@@ -1,0 +1,214 @@
+/*  
+Theme Name: Embroidery Advertisers
+Theme URI: http://tysonbrooks.net
+Description: Custom theme for Embroidery Advertisers.
+Version: 0.4
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+
+This file is used for website element layout only. 
+Color Changes can be found in /css/month.css
+
+*/
+
+h1{font-family: Georgia, Sans-serif; padding: 0 0 10px 0;}
+#wrapper { margin-left:auto; margin-right:auto; margin-top:25px; width:1024px; padding: 5px 15px 5px 15px; border-radius:25px; -moz-border-radius:25px; }
+#bmessage { border-radius:15px; -moz-border-radius:15px; font-weight:bold; font-size:20px; padding:15px 0 15px 0; }
+/*==============================*/
+/*           Header             */
+/*==============================*/
+#header { }
+#header img { 	margin: 5px auto 5px auto;
+border-radius:15px; -moz-border-radius:15px;
+width:100%; }
+
+#headerimg {}
+#header h2 { padding:15px 0 0 65px; }
+#header .sitedesc { padding:0 0 15px 85px; }
+
+/*==============================*/
+/*           Slider             */
+/*==============================*/
+#featured-slider { width:672px; padding: 10px 37px 30px 30px; margin:0 auto 8px auto; float:left; border-top-left-radius:10px; border-bottom-left-radius:10px; -moz-border-radius:10px; }
+#featured-slider img { border-radius:15px; -moz-border-radius:15px; }
+.FA_featured_articles { border-radius:15px; -moz-border-radius:15px; }
+#featured-slider .image_container { border:none;}
+#FA_slider_629 { border:none; }
+#featured-slider h2, #featured-slider p, #FA_slider_629, #featured-slider .image_container { background:transparent; }
+/*==============================*/
+/*      Ad Space / Login        */
+/*==============================*/
+
+#membersignin { float:right; width:280px; height:385px; margin:0 0 5px 5px; border-top-right-radius:10px; border-bottom-right-radius:10px; -moz-border-radius:10px; }
+#logout { font-size:12px; }
+#membersignin p { padding:0 0 0 15px; font-size:16px; }
+#signinform {}
+#adspace1 { 
+	float:none;
+	padding-left:10px;
+	overflow:visible;
+}
+#adspace1 a:link {
+color:transparent;
+}
+#b-1,#b-2,#b-4,#b-12{
+overflow:hidden;
+}
+#b-1,#b-2,#b-4,#b-12{
+color:#transparent;
+}
+#adspace1 img { border-radius:15px; -moz-border-radius:15px; }
+/*==============================*/
+/*           Content            */
+/*==============================*/
+
+#content { width:739px; float:left; padding-bottom:5px; margin-bottom:10px; font-size:16px; font-weight:bold; border-top-left-radius:10px; border-bottom-left-radius:10px; border-bottom-right-radius:10px; -moz-border-radius:10px; }
+#content-full { width:100%; float:left; padding-bottom:5px; margin-bottom:10px; font-size:16px; font-weight:bold; border-radius:10px; -moz-border-radius:10px; }
+
+#content img { border-radius:15px; -moz-border-radius:15px; }
+.post {	padding:5px 15px 5px 15px;}
+.post h2 { text-align:left; font-size:24px; }
+.entry-title { padding:5px 0 5px 0; }
+.entrytext { padding:5px 0 10px 0; }
+#postnav { width:100%; margin-top:15px;}
+#contactad { margin:0 0 0 15px;	}
+
+#aboutadvertiser {
+margin:15px;
+background:#f2f2f2;
+border:1px solid #000;
+padding:4px;
+min-height:225px;
+}
+#advertiserimg {
+}
+#advertiserimg  img{
+width:125px;
+height:125px;
+background:#eee;
+}
+#advertiserdesc {
+}
+.advertclear {
+clear:both;
+}
+
+#socialbutton { margin:0 0 0 -20px; }
+#contact { margin:25px 0 15px 35px; width:380px; }
+.send { padding: 2px 15px 2px 15px; border-radius:15px; -moz-border-radius:15px;  }
+.social-button-container {
+    clear: both;
+    overflow: hidden;
+    margin: 0 auto;
+    /*width: 50%*/
+}
+
+.social-fb {
+	float:left;
+	margin-right:8px;
+}
+.social-twitter {
+	float:left;
+	margin-right:-24px;
+}
+.social-gplus{
+	float:left;
+	margin:-4px -28px 0 0;
+}
+.social-linkedin {/*margin: 7px 0;text-align:left;*/
+float:left;
+}
+/*==============================*/
+/*         Navigation           */
+/*==============================*/
+#top-nav { margin: 5px 0 0 0; } 
+#access { display: block; float: left; margin: 0 auto 5px auto; width:1024px; border-radius:10px; -moz-border-radius:10px; }
+#access .home { border-top-left-radius:8px; border-bottom-left-radius:8px; -moz-border-radius:8px; }
+#access ul { list-style: none; margin: 0; padding-left: 0; }
+#access li { float: left; position: relative; }
+#access a { display: block; line-height: 2em; padding: 0 1em; text-decoration: none; }
+#access ul ul { display: none; float: left; position: absolute; top: 2em; left: 0; z-index: 99999; }
+#access ul ul ul { left: 100%; top: 0; }
+/* First Level Link */
+#access ul ul a { line-height: 1em; padding: .5em .5em .5em 1em; width: 10em; height: auto; }
+#access ul li:hover > ul { display: block; }
+/*==============================*/
+/*           Sidebar            */
+/*==============================*/
+#sidebar{ width:280px; float:right; font-size:18px; text-align:center; border-top-right-radius:10px; border-bottom-right-radius:10px; -moz-border-radius:10px; margin:0 0 10px 0; }
+#sidebar img { border-radius:15px; -moz-border-radius:15px; }
+#sidebar li { list-style-type:none; }
+#sidebar ul{ list-style-type: none; margin: 0; padding: 0 10px 0 10px; }
+#sidebar ul li{}
+#sidebar ul ul li{ padding: 0; line-height: 24px; }
+table#wp-calendar{ width: 100%; }
+#support a:link {
+color:transparent;
+}
+/*==============================*/
+/*           Footer             */
+/*==============================*/
+#footer { clear:both; text-align:center; padding:15px 0 10px 0; width:100%; border-radius:10px; -moz-border-radius:10px; }
+/**************************************/
+.entry{padding:5px 10px 5px 10px;}.entry blockquote {padding: 15px 15px 15px 15px;}
+.alignleft {display: inline;float: left;margin-right: 1.625em;}
+.alignright {display: inline;	float: right;margin-left: 1.625em;}
+
+.aligncenter {clear: both; display: block; margin-left: auto;	margin-right: auto;}
+
+.wp-caption, .gallery-caption{
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    background-color:#f7f7f7;
+    border:1px solid #444;
+    padding:3px;
+    text-align:center;
+    max-width:95%;
+    height: auto;
+    margin-bottom: 15px;
+    position: relative;
+}
+.wp-caption:before, .wp-caption:after {  
+    position: absolute;  
+    width: 50%;  
+    height: 10px;  
+    content: ' ';  
+    left: 12px;  
+    bottom: 12px;  
+    background: transparent;  
+    -webkit-transform: skew(-5deg) rotate(-5deg);  
+    -moz-transform: skew(-5deg) rotate(-5deg);  
+    -ms-transform: skew(-5deg) rotate(-5deg);  
+    -o-transform: skew(-5deg) rotate(-5deg);  
+    transform: skew(-5deg) rotate(-5deg);  
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);  
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);  
+    z-index: -1;  
+}  
+.wp-caption:after  
+{  
+    left: auto;  
+    right: 12px;  
+    -webkit-transform: skew(5deg) rotate(5deg);  
+    -moz-transform: skew(5deg) rotate(5deg);  
+    -ms-transform: skew(5deg) rotate(5deg);  
+    -o-transform: skew(5deg) rotate(5deg);  
+    transform: skew(5deg) rotate(5deg);  
+}
+.wp-caption img{
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    max-width: 97%;
+    height: auto;
+}
+
+.wp-caption-text{
+    line-height:1.1em;
+    text-align:center;
+}
+
+#poststuff, #simple-local-avatar-ratings, #hideadmin {display:none;}
+.page-item-1541, .page-item-1308, .page-item-4871, .page-item-5911, .page-item-5919 { visibility:hidden; display:none; }

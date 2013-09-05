@@ -1,0 +1,14 @@
+Keep a change log to describe all the changes made to program source files. The purpose of this is so that people investigating bugs in the future will know about the changes that might have introduced the bug. Often a new bug can be found by looking at what was recently changed. More importantly, change logs can help you eliminate conceptual inconsistencies between different parts of a program, by giving you a history of how the conflicting concepts arose and who they came from. 
+
+
+
+2010-04-02  Version 1.2 Pixel Theme Studio  <studio@pixelthemestudio.ca>
+     
+	* Menu: New code for custom ordering of menu items
+	* Columns: Changed column concept to a table without conflict of mootools
+	* Layout: Fixed out of place footer coding
+	* Paging: Added multi-page post and page capability
+
+2009-06-01  Version 1.0 Pixel Theme Studio  <studio@pixelthemestudio.ca>
+     
+	* New Theme: Designed and developed the Evening Shade free theme

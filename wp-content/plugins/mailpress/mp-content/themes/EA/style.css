@@ -1,0 +1,20 @@
+/*
+Theme Name: EA Theme
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+Template: _template
+*/
+p {
+	line-height:1.4em;
+	font-size:0.85em;
+}
+
+a.more-link {
+	color:#6D8C82;
+}
+img {
+	padding:5px;
+}

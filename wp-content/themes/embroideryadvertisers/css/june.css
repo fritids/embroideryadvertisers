@@ -1,0 +1,67 @@
+body { background:#226093; }
+
+a:link, a:visited{text-decoration: underline;color:#8a1d15;}
+a:hover{text-decoration: none;}
+#wrapper { background:#098fd6; border:2px solid; }
+#bmessage { color:#fff; }
+/*==============================*/
+/*           Header             */
+/*==============================*/
+#header {}
+#header h2, .sitedesc { color:#8a1d15; }
+/*==============================*/
+/*           Slider             */
+/*==============================*/
+#featured-slider {background:#ffffff;}
+#featured-slider p a { color:#fff; }
+.FA_featured_articles { background:#515151; color:#fff;}
+#featured-slider p { color:#fff; }
+/*==============================*/
+/*      Ad Space / Login        */
+/*==============================*/
+#membersignin { background:#ffffff; color:#000; }
+#logout { color:#fdee05; }
+/*==============================*/
+/*           Content            */
+/*==============================*/
+#content { background:#ffffff; color:#000; }
+#content-full { background:#ffffff; color:#000; }
+.post h2 { color:#0032a6; }
+.post h2 a {color:#0032a6;}
+.entry-title { color:#0f0; }
+.entry-title a{ color:#ffc318; }
+
+.send { background:#8a1d15; color:#fff; }
+.send:hover { background:#e3e3e3; color:#000; }
+/*==============================*/
+/*         Navigation           */
+/*==============================*/
+#access { background: #ffffff; color:#000; border:2px solid #8a1d15; }
+#access a:link { text-decoration: underline; color: #000; }
+#access a:visited { text-decoration: underline; color: #000; }
+#access a:hover { text-decoration: none; color: #000; }
+#access a:active { text-decoration: underline; color: #fff; }
+#access ul ul {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+/* First Level Link */
+#access ul ul a { background: #e3e3e3; color:#000; } /* All sub-menu backgrounds */
+/* First Level */
+#access li:hover > a, #access ul ul :hover > a { background: #0a36d3; color:#fff; } /* active menu background */
+#access ul ul a:hover { background: #cecece; color:#000;} /* on mouse roll-over */
+#access ul li:hover > ul { display: block; }
+/*==============================*/
+/*           Sidebar            */
+/*==============================*/
+#sidebar{ background:#ffffff; color:#000; }
+#sidebar h2{color:#0032a6;}
+#sidebar ul li h2{ font-family: Georgia, Sans-serif; }
+/*==============================*/
+/*           Footer             */
+/*==============================*/
+#footer { background:#ffffff; color:#000; }
+#footer a{ color:#5d130e;}
+/**************************************/
+

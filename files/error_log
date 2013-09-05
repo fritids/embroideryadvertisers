@@ -1,0 +1,12 @@
+[26-Jul-2013 14:47:19 America/Denver] PHP Notice:  Undefined index: session in /home2/tysonbro/public_html/embads/files/index.php on line 3
+[26-Jul-2013 14:47:19 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home2/tysonbro/public_html/embads/files/index.php on line 20
+[26-Jul-2013 20:53:27 America/Denver] PHP Notice:  Undefined index: type in /home2/tysonbro/public_html/embads/files/index.php on line 6
+[26-Jul-2013 20:53:43 America/Denver] PHP Notice:  Undefined index: type in /home2/tysonbro/public_html/embads/files/index.php on line 6
+[26-Jul-2013 20:54:45 America/Denver] PHP Notice:  Undefined index: type in /home2/tysonbro/public_html/embads/files/index.php on line 6
+[26-Jul-2013 22:48:06 America/Denver] PHP Notice:  Undefined index: type in /home2/tysonbro/public_html/embads/files/index.php on line 6
+[26-Jul-2013 22:48:41 America/Denver] PHP Notice:  Undefined index: type in /home2/tysonbro/public_html/embads/files/index.php on line 6
+[27-Jul-2013 14:57:35 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home2/tysonbro/public_html/embads/files/index.php on line 20
+[11-Aug-2013 23:37:27 America/Denver] PHP Notice:  Undefined index: session in /home2/tysonbro/public_html/embads/files/index.php on line 3
+[11-Aug-2013 23:37:27 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home2/tysonbro/public_html/embads/files/index.php on line 20
+[19-Aug-2013 08:34:02 America/Denver] PHP Notice:  Undefined index: session in /home2/tysonbro/public_html/embads/files/index.php on line 3
+[19-Aug-2013 08:34:02 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home2/tysonbro/public_html/embads/files/index.php on line 20
