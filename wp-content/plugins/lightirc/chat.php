@@ -6,14 +6,23 @@ Description: Wordpress port of LightIRC
 Version: 0.1
 Author: Tyson Brooks
 Author URI: http://mach7enterprises.com
-*/function get_avatar_url($get_avatar){preg_match("/src='(.*?)'/i", $get_avatar, $matches);return $matches[1];}function m7_avatar(){if (isset($_GET['getImage'])){$nick = $_GET['getImage']; /*nickname*/$prefix = $_GET['prefix'];/* Figure out the userID based on the nick in $nick*/$userID = get_user_by( 'login', $_GET['getImage'] );$avatar = get_avatar_url(get_avatar($userID->ID, 15));/* Get the image*/$imageData = file_get_contents($avatar);/* Figure out the content type - looking at the URL suffix could be a good place*/header('Content-Type: image/jpg');/* Send the image*/echo $imageData;/* Prevent WP from doing anything else*/exit;}else{/* getImage not called, continue as normal*/}}
+*/
+function m7chat_get_user_role($uid) {
+		global $wpdb;
+		$role = $wpdb->get_var("SELECT meta_value FROM {$wpdb->usermeta} WHERE meta_key = 'wp_capabilities' AND user_id = {$uid}");
+		  if(!$role) return 'non-user';
+			$rarr = unserialize($role);
+			$roles = is_array($rarr) ? array_keys($rarr) : array('non-user');
+			return $roles[0];
+}
+function get_avatar_url($get_avatar){preg_match("/src='(.*?)'/i", $get_avatar, $matches);return $matches[1];}function m7_avatar(){if (isset($_GET['getImage'])){$nick = $_GET['getImage']; /*nickname*/$prefix = $_GET['prefix'];/* Figure out the userID based on the nick in $nick*/$userID = get_user_by( 'login', $_GET['getImage'] );$avatar = get_avatar_url(get_avatar($userID->ID, 15));/* Get the image*/$imageData = file_get_contents($avatar);/* Figure out the content type - looking at the URL suffix could be a good place*/header('Content-Type: image/jpg');/* Send the image*/echo $imageData;/* Prevent WP from doing anything else*/exit;}else{/* getImage not called, continue as normal*/}}
 /* Do the avatar check before any headers are sent*/
 add_filter('send_headers', 'm7_avatar');
  
 
 add_action('wp_ajax_update_chat_meta', 'update_chat_meta');
 function update_chat_meta() {
-$current_user = wp_get_current_user(); $username = $current_user->user_login; $userpass = $current_user->user_pass; $useremail = $current_user->user_email; $firstname = $current_user->user_firstname; $lastname = $current_user->user_lastname; $displayname = $current_user->display_name; $userid = $current_user->ID;     $role=get_user_role($userid);
+$current_user = wp_get_current_user(); $username = $current_user->user_login; $userpass = $current_user->user_pass; $useremail = $current_user->user_email; $firstname = $current_user->user_firstname; $lastname = $current_user->user_lastname; $displayname = $current_user->display_name; $userid = $current_user->ID;     $role=m7chat_get_user_role($userid);
 if (isset($_POST['func'])) {
 	
 	update_usermeta( $userid, $_POST['func'], $_POST['set'] );
@@ -27,7 +36,7 @@ if (isset($_POST['func'])) {
 function m7_livechat($atts) { 
 extract(shortcode_atts(array('chatwidth' => '445px','chatheight' => '128px','ircserver' => 'irc.mach7enterprises.com','ircport' => '6667','flashport' => '9024','autojoin' => '#mach7','style' => 'lightblue','fontsize' => '12'), $atts));
 
-$current_user = wp_get_current_user(); $username = $current_user->user_login; $userpass = $current_user->user_pass; $useremail = $current_user->user_email; $firstname = $current_user->user_firstname; $lastname = $current_user->user_lastname; $displayname = $current_user->display_name; $userid = $current_user->ID;     $role=get_user_role($userid);
+$current_user = wp_get_current_user(); $username = $current_user->user_login; $userpass = $current_user->user_pass; $useremail = $current_user->user_email; $firstname = $current_user->user_firstname; $lastname = $current_user->user_lastname; $displayname = $current_user->display_name; $userid = $current_user->ID;     $role=m7chat_get_user_role($userid);
 
 /* Memory Settings */
 $chattime = get_the_author_meta( 'chattime', $userid );
