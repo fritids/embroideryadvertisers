@@ -1,5 +1,5 @@
 <?
-function get_user_role($uid) {
+function pl_get_user_role($uid) {
 		global $wpdb;
 		$role = $wpdb->get_var("SELECT meta_value FROM {$wpdb->usermeta} WHERE meta_key = 'wp_capabilities' AND user_id = {$uid}");
 		  if(!$role) return 'non-user';
@@ -13,7 +13,7 @@ function check_post_limit() {
     global $userdata;
     global $post_type;
     global $wpdb;    
-    $role=get_user_role($userdata->ID);
+    $role=pl_get_user_role($userdata->ID);
 	$day=date('Y-m-d', strtotime(' -7 day'));
     $week = date( $day.' 00:00:00', ( gmmktime() ));
 	$today = date( 'Y-m-d 00:00:00', ( gmmktime() ));
