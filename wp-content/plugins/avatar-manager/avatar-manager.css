@@ -1,0 +1,15 @@
+#profile-page .avatar-manager img {
+	margin: 2px 0;
+	vertical-align: middle;
+}
+
+#profile-page .avatar-manager .delete {
+	color: red;
+	padding: 2px;
+}
+
+#profile-page .avatar-manager .delete:hover {
+	background: red;
+	color: #fff;
+	text-decoration: none;
+}

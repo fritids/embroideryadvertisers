@@ -285,7 +285,7 @@ function adrotate_insert_group() {
 			unset($value);
 	
 			// Update the group itself
-			$wpdb->update($wpdb->prefix.'adrotate_groups', array('name' => $name, 'modus' => $modus, 'fallback' => $fallback, 'sortorder' => $sortorder, 'cat' => $category, 'cat_loc' => $category_loc, 'page' => $page, 'page_loc' => $page_loc, 'geo' => $geo, 'wrapper_before' => $wrapper_before, 'wrapper_after' => $wrapper_after, 'gridrows' => $rows, 'gridcolumns' => $columns, 'admargin' => $admargin, 'adwidth' => $adwidth, 'adheight' => $adheight, 'adspeed' => $adspeed), array('id' => $id));
+			$wpdb->update($wpdb->prefix.'adrotate_groups', array('name' => $name, 'modus' => $modus, 'fallback' => $fallback, 'sortorder' => $sortorder, 'cat' => $category, 'cat_loc' => $category_loc, 'page' => $page, 'page_loc' => $page_loc, 'wrapper_before' => $wrapper_before, 'wrapper_after' => $wrapper_after, 'gridrows' => $rows, 'gridcolumns' => $columns, 'admargin' => $admargin, 'adwidth' => $adwidth, 'adheight' => $adheight, 'adspeed' => $adspeed), array('id' => $id));
 			adrotate_return($action, array($id));
 			exit;
 		} else {
@@ -685,8 +685,6 @@ function adrotate_options_submit() {
 			else 												$config['w3caching'] 	= 'N';
 		if(isset($_POST['adrotate_jquery'])) 					$config['jquery'] 		= 'Y';
 			else 												$config['jquery'] 		= 'N';
-		if(isset($_POST['adrotate_jtools'])) 					$config['jtools'] 		= 'Y';
-			else 												$config['jtools'] 		= 'N';
 		if(isset($_POST['adrotate_jshowoff'])) 					$config['jshowoff'] 	= 'Y';
 			else 												$config['jshowoff'] 	= 'N';
 		update_option('adrotate_config', $config);

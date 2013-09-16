@@ -78,8 +78,8 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
+//define('WP_DEBUG', true);
 define('WP_DEBUG', false);
-
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
@@ -91,3 +91,8 @@ require_once(ABSPATH . 'wp-settings.php');
 
 /* Disable evil background wp-cron */
 define('DISABLE_WP_CRON', true);
+
+if(is_admin()) {
+add_filter('filesystem_method', create_function('$a', 'return "direct";' ));
+define( 'FS_CHMOD_DIR', 0751 );
+}

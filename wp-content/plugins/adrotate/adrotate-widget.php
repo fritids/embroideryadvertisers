@@ -70,6 +70,8 @@ class adrotate_widgets extends WP_Widget {
 
 		$defaults = array();
 		$instance = wp_parse_args( (array) $instance, $defaults );
+		
+		$title = $type = $id = '';
 		extract($instance);
 		$title = esc_attr( $title );
 		$type = esc_attr( $type );

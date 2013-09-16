@@ -1,0 +1,1068 @@
+
+2013-09-15 16:15:02 000000 --  **** Start logging **** mp_mail *** level : 8191 **** (5.4) **** /wp-admin/admin.php?page=mailpress_write
+2013-09-15 16:15:02 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:15:02 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-user-frontend/wpuf-payment.php at line 55 
+2013-09-15 16:15:02 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-eMember/wp_eMember1.php at line 1173 
+2013-09-15 16:15:02 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-eMember/wp_eMember1.php at line 1174 
+2013-09-15 16:15:02 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-eMember/wp_eMember1.php at line 1176 
+2013-09-15 16:15:02 000000 --  
+
+ ------------------- start of mail -------------------   
+ From : Embroidery Advertisers <contact@embroideryadvertisers.com>  
+ To   : Tyson Brooks <tyson@tysonbrooks.net>  
+ Subject : Testing 
+   ------------------- plaintext -------------------  
+ Embroidery Advertisers
+Helping Build Your Business, One Stitch at a Time!
+
+* ~~~~~~~ *
+! Testing !
+* ~~~~~~~ *
+September 15, 2013
+
+
+
+							this mail is brought to you by MailPress
+
+View [http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?action=mail_link&view=8764bb488728725ea417bfd472957068&id=56]
+Unsubscribe [http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?action=mail_link&del=8764bb488728725ea417bfd472957068] 
+
+ ------------------- text/html -------------------  
+ <!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Embroidery Advertisers > Testing > tyson@tysonbrooks.net</title>
+<style type='text/css' media='all'>
+/*
+Theme Name: MailPress template
+Description: theme used as template
+*/
+
+
+td.mp_twitter_link a.mp_twitter_date {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link a.mp_twitter_date:hover {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link ul li a b {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link ul li a:hover b {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link a {
+text-decoration: none;
+color: #666;
+}
+td.mp_twitter_link a:hover {
+text-decoration: underline !important;
+color: #444 !important;
+}
+
+a.mp_twitter_author_id:hover {
+text-decoration: underline !important;
+color: #000 !important;
+}</style>
+<style type='text/css' media='all'>
+/*
+Theme Name: EA Theme
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+Template: _template
+*/
+p {
+	line-height:1.4em;
+	font-size:0.85em;
+}
+
+a.more-link {
+	color:#6D8C82;
+}
+img {
+	padding:5px;
+}
+</style>
+	</head>	<body>
+		<div style="color:#000;font-family: verdana,geneva;background:none repeat scroll 0 0 #f0f0f0;">
+			<div style="margin:0 auto;border:none;padding:0;width:960px;background:none repeat scroll 0 0 #fff;">
+			<div style="background:none repeat scroll 0 0 transparent;border:0 none;clear:both;color:#666;font-family:Verdana,Arial,sans-serif;font-size:10px;font-style:italic;line-height:5px;margin:0;padding:5px 0;text-align:center;vertical-align:baseline;margin:0 0 5px;">
+				Email not displaying correctly ? <a href='http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=561&co=h&us=8764bb488728725ea417bfd472957068'>View it in your browser</a>
+			</div>
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;background:#000;height:60px;">	
+					<tr>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;text-align:left;">
+													<img src='Sep-maillogo.jpg' alt='img' />
+							Sep						</td>
+						<td style='width:50px;'></td>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;"></td>
+					</tr>
+				</table>
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:0;margin:0;height:70px;border-bottom:1px solid #C6D9E9;background:#DCFAF1;">
+					<tr>
+						<td style="padding:0 10px 0 0;margin:0;border:none;background:#6e6e6e;font-family:Georgia,Times,serif;color:#fff;font-size:30px;text-align:right;">
+							September 15, 2013						</td>
+					</tr>
+				</table>
+				<div  style="margin:0;padding:20px 10px;border:0;text-align:left;width:100%;">
+					<div  style="margin:0;padding:0;border:0;width:95%;float:left;">
+					<div style="float:right; font-size:12px; margin:5px;">All times listed in emails are based on mountain times, unless other wise stated.</div>
+					<div style="clear:both;"></div>
+<!-- end header --><table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:15px 20px 5px;">
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+Testing				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+September 15, 2013				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<p>Test</p>
+				</div>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+&#160;				</div>
+			</div>
+		</td>
+	</tr>
+</table><!-- start footer -->
+<div><center>
+Like what we are doing? Take a moment and give us some feedback, simply click on the link to go to the survey: <a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=562&co=h&us=8764bb488728725ea417bfd472957068">http://embroideryadvertisers.com/survey/</a><br>
+
+<h3>This newsletter sponsored by:<br><a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=563&co=h&us=8764bb488728725ea417bfd472957068" target="new"><img src="http://embroideryadvertisers.com/wp-content/uploads/2013/03/windwoman.jpg" /></a></h3>
+If you would like to sponsor this newsletter please check out our <a href="http://embroideryadvertisers.com/advertise-with-us/#newsletter">advertising page</a>.
+
+<center></div>
+				</div>
+				
+			</div>
+
+			
+			<div style='clear:both;'></div>
+			<div style="font-size:12px; margin:15px auto 5px auto; height:25px;">
+			<center>
+			Embroidery Advertisers &middot; 1501 Fox Park Dr. #13-0 &middot; West Jordan, Utah 84088
+			</center>
+			</div>
+			<div style="font-size:12px;">
+				<div style="float:left;">Embroidery Advertisers</div>
+				<div style="float:right;">Helping Build Your Business, One Stitch at a Time!</div>
+				<div style="clear:both;"></div>
+							<div><center>Click <a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=564&co=h&us=8764bb488728725ea417bfd472957068">here</a> to unsubscribe from these emails.</center></div>
+			</div>
+			            
+		</div>
+		</div>
+	
+<img src='http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=o&mm=565&co=h&us=8764bb488728725ea417bfd472957068' alt='' style='margin:0;padding:0;border:none;' /></body>
+</html> 
+
+ ------------------ end of mail ------------------  
+
+
+2013-09-15 16:15:02 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/plugins/mailpress/mp-content/themes/EA/images/Sep-maillogo.jpg
+2013-09-15 16:15:02 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/03/windwoman.jpg
+2013-09-15 16:15:02 000000 -- MAILPRESS [NOTICE] - Disconnecting from embads (MP_Mail)
+2013-09-15 16:15:02 000000 -- MAILPRESS [NOTICE] - Disconnected (MP_Mail)
+2013-09-15 16:15:03 000000 -- MAILPRESS [NOTICE] - Connecting to embads (MP_Mail)
+2013-09-15 16:15:03 000000 -- MAILPRESS [NOTICE] - Connected (MP_Mail)
+2013-09-15 16:15:03 000000 -- MAILPRESS [NOTICE] - :::: MAIL SAVED ::::
+2013-09-15 16:15:03 000000 --  **** End   logging **** mp_mail *** level : 8191 **** status : TRUE 
+
+2013-09-15 16:18:52 000000 --  **** Start logging **** mp_mail *** level : 8191 **** (5.4) **** /wp-admin/options-general.php?page=mailpress_settings
+2013-09-15 16:18:52 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::posts_where_paged() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 230 
+2013-09-15 16:18:52 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::posts_join_paged() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 230 
+2013-09-15 16:18:52 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:52 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_width - assumed 'force_max_width' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 112 
+2013-09-15 16:18:52 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_height - assumed 'force_max_height' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 113 
+2013-09-15 16:18:53 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:53 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:53 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:53 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_width - assumed 'force_max_width' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 112 
+2013-09-15 16:18:53 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_height - assumed 'force_max_height' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 113 
+2013-09-15 16:18:53 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:53 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:53 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:53 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:18:53 000000 --  
+
+ ------------------- start of mail -------------------   
+ From : Embroidery Advertisers <tyson@embroideryadvertisers.com>  
+ To   : Tyson Brooks <tyson@tysonbrooks.net>  
+ Subject : Connection test : Embroidery Advertisers - Template : daily 
+   ------------------- plaintext -------------------  
+ Embroidery Advertisers
+Helping Build Your Business, One Stitch at a Time!
+
+
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+! Tatting 25 by Murphy’s Designs !
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=568&co=p&us=8764bb488728725ea417bfd472957068
+September 8, 2013
+
+	Tatting done with MYLAR in the machine embroidery hoop!  These are EASY for you to stitchout.  3 are for the 4×4 inch hoops & 3 are for the 5×7 inch hoops.  You’ll want to get them ALL.  Complete instructions included. 
+
+	For 4×4 inch (100 x 100 mm) & 5×7 inch (130 x 180 mm) hoop 
+
+	All designs are delivered as email attachment in Zip file. Join my newsletter to find out when I have new designs and exclusive offers. http://groups.yahoo.com/group/MurphysDesignsNews/join [http://groups.yahoo.com/group/MurphysDesignsNews/join] http://www.murphysdesigns.com/tatting_25.htm [http://www.murphysdesigns.com/tatting_25.htm] [ [ [http://www.murphysdesigns.com/tatting_25.htm] ] Tatted Bookmarks by Murphy’s Designs ] 
+
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+! Tatting 24 Crosses at Murphy’s Designs !
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=569&co=p&us=8764bb488728725ea417bfd472957068
+September 8, 2013
+
+	Tatting cross done in the machine embroidery hoop! These are easy for you to stitchout and have free-standing tatting - looks like you made it with a shuttle. Comes in 3 sizes! Complete instructions included. For 5x7 inch (130 x 180 mm) hoop All designs are delivered as email attachment in Zip file. Join my newsletter to find out when I have new designs and exclusive offers. http://groups.yahoo.com/group/MurphysDesignsNews/join [http://groups.yahoo.com/group/MurphysDesignsNews/join] http://www.murphysdesigns.com/tatting_24.htm [http://www.murphysdesigns.com/tatting_24.htm] 
+
+	 [http://www.murphysdesigns.com/tatting_24.htm] 
+
+	 Tatted Crosses by Murphy’s Designs 
+
+							this mail is brought to you by MailPress
+
+View [http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?action=mail_link&view=8764bb488728725ea417bfd472957068&id=57]
+Unsubscribe [http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?action=mail_link&del=8764bb488728725ea417bfd472957068] 
+
+ ------------------- text/html -------------------  
+ <!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Embroidery Advertisers > Connection test : Embroidery Advertisers - Template : daily > tyson@tysonbrooks.net</title>
+<style type='text/css' media='all'>
+/*
+Theme Name: MailPress template
+Description: theme used as template
+*/
+
+
+td.mp_twitter_link a.mp_twitter_date {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link a.mp_twitter_date:hover {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link ul li a b {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link ul li a:hover b {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link a {
+text-decoration: none;
+color: #666;
+}
+td.mp_twitter_link a:hover {
+text-decoration: underline !important;
+color: #444 !important;
+}
+
+a.mp_twitter_author_id:hover {
+text-decoration: underline !important;
+color: #000 !important;
+}</style>
+<style type='text/css' media='all'>
+/*
+Theme Name: EA Theme
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+Template: _template
+*/
+p {
+	line-height:1.4em;
+	font-size:0.85em;
+}
+
+a.more-link {
+	color:#6D8C82;
+}
+img {
+	padding:5px;
+}
+</style>
+	</head>	<body>
+		<div style="color:#000;font-family: verdana,geneva;background:none repeat scroll 0 0 #f0f0f0;">
+			<div style="margin:0 auto;border:none;padding:0;width:960px;background:none repeat scroll 0 0 #fff;">
+			<div style="background:none repeat scroll 0 0 transparent;border:0 none;clear:both;color:#666;font-family:Verdana,Arial,sans-serif;font-size:10px;font-style:italic;line-height:5px;margin:0;padding:5px 0;text-align:center;vertical-align:baseline;margin:0 0 5px;">
+				Email not displaying correctly ? <a href='http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=567&co=h&us=8764bb488728725ea417bfd472957068'>View it in your browser</a>
+			</div>
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;background:#000;height:60px;">	
+					<tr>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;text-align:left;">
+													<img src='Sep-maillogo.jpg' alt='img' />
+							Sep						</td>
+						<td style='width:50px;'></td>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;"></td>
+					</tr>
+				</table>
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:0;margin:0;height:70px;border-bottom:1px solid #C6D9E9;background:#DCFAF1;">
+					<tr>
+						<td style="padding:0 10px 0 0;margin:0;border:none;background:#6e6e6e;font-family:Georgia,Times,serif;color:#fff;font-size:30px;text-align:right;">
+							September 15, 2013						</td>
+					</tr>
+				</table>
+				<div  style="margin:0;padding:20px 10px;border:0;text-align:left;width:100%;">
+					<div  style="margin:0;padding:0;border:0;width:95%;float:left;">
+					<div style="float:right; font-size:12px; margin:5px;">All times listed in emails are based on mountain times, unless other wise stated.</div>
+					<div style="clear:both;"></div>
+<!-- end header --><h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">Whats in this issue of Embroidery Advertisers Daily News?</h2>
+				<ul style="padding-left:15px;">
+											<li style="list-style-type:disc;"><a style="font-family:verdana,geneva,Sans-Serif;font-size:11px;font-weight:bold;color:#6D8C82;text-decoration:none;" href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=568&co=h&us=8764bb488728725ea417bfd472957068" rel="bookmark">Tatting 25 by Murphy&#8217;s Designs</a></li>
+											<li style="list-style-type:disc;"><a style="font-family:verdana,geneva,Sans-Serif;font-size:11px;font-weight:bold;color:#6D8C82;text-decoration:none;" href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=569&co=h&us=8764bb488728725ea417bfd472957068" rel="bookmark">Tatting 24 Crosses at Murphy&#8217;s Designs</a></li>
+									</ul>
+
+<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:15px 20px 5px;">
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+					<a style="text-decoration:none;color:#333;" href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=568&co=h&us=8764bb488728725ea417bfd472957068" rel="bookmark" title="Permanent Link to Tatting 25 by Murphy&#8217;s Designs">
+Tatting 25 by Murphy&#8217;s Designs					</a>
+				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+				Posted by <a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=570&co=h&us=8764bb488728725ea417bfd472957068" title="Posts by murphy" rel="author">murphy</a>				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<div style="float:left;">
+	<!-- MailPress_mail_api start -->
+<img alt="Tatted Bookmarks by Murphy's Designs" src="http://embroideryadvertisers.com/wp-content/uploads/2013/05/BookWHeart450.jpg" style="width:129px;height:100px;" />
+<!-- MailPress_mail_api end --></div>
+<div style="float:right;width:80%;">
+<p>Tatting done with Mylar in the machine embroidery hoop!  These are easy for you to stitchout.  3 are for the 4&#215;4 inch hoops &amp; 3 are for the 5&#215;7 inch hoops.  You&#8217;ll want to get them ALL.  Complete instructions included. For 4&#215;4 inch (100 x 100 mm) &amp; 5&#215;7 inch (130 x 180 mm) hoop All designs are delivered &hellip; </p>
+<p><a class="more-link block-button" href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=568&co=h&us=8764bb488728725ea417bfd472957068">Continue reading &raquo;</a></p>
+</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+					<a style="text-decoration:none;color:#333;" href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=569&co=h&us=8764bb488728725ea417bfd472957068" rel="bookmark" title="Permanent Link to Tatting 24 Crosses at Murphy&#8217;s Designs">
+Tatting 24 Crosses at Murphy&#8217;s Designs					</a>
+				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+				Posted by <a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=570&co=h&us=8764bb488728725ea417bfd472957068" title="Posts by murphy" rel="author">murphy</a>				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<div style="float:left;">
+	<!-- MailPress_mail_api start -->
+<img class="aligncenter" title="All-3-W-flwr350" alt="All-3-W-flwr350" src="http://atw.typepad.com/.a/6a00d83453a63969e2017ee90be8c5970d-800wi" border="0" style="width:133px;height:100px;" />
+<!-- MailPress_mail_api end --></div>
+<div style="float:right;width:80%;">
+<p>Tatting cross done in the machine embroidery hoop! These are easy for you to stitchout and have free-standing tatting &#8211; looks like you made it with a shuttle. Comes in 3 sizes! Complete instructions included. For 5&#215;7 inch (130 x 180 mm) hoop All designs are delivered as email attachment in Zip file. Join my &hellip; </p>
+<p><a class="more-link block-button" href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=569&co=h&us=8764bb488728725ea417bfd472957068">Continue reading &raquo;</a></p>
+</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+<div style="clear:both;"></div><!-- start footer -->
+<div><center>
+Like what we are doing? Take a moment and give us some feedback, simply click on the link to go to the survey: <a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=571&co=h&us=8764bb488728725ea417bfd472957068">http://embroideryadvertisers.com/survey/</a><br>
+
+<h3>This newsletter sponsored by:<br><a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=572&co=h&us=8764bb488728725ea417bfd472957068" target="new"><img src="http://embroideryadvertisers.com/wp-content/uploads/2013/03/windwoman.jpg" /></a></h3>
+If you would like to sponsor this newsletter please check out our <a href="http://embroideryadvertisers.com/advertise-with-us/#newsletter">advertising page</a>.
+
+<center></div>
+				</div>
+				
+			</div>
+
+			
+			<div style='clear:both;'></div>
+			<div style="font-size:12px; margin:15px auto 5px auto; height:25px;">
+			<center>
+			Embroidery Advertisers &middot; 1501 Fox Park Dr. #13-0 &middot; West Jordan, Utah 84088
+			</center>
+			</div>
+			<div style="font-size:12px;">
+				<div style="float:left;">Embroidery Advertisers</div>
+				<div style="float:right;">Helping Build Your Business, One Stitch at a Time!</div>
+				<div style="clear:both;"></div>
+							<div><center>Click <a href="http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=l&mm=573&co=h&us=8764bb488728725ea417bfd472957068">here</a> to unsubscribe from these emails.</center></div>
+			</div>
+			            
+		</div>
+		</div>
+	
+<img src='http://embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/action.php?tg=o&mm=574&co=h&us=8764bb488728725ea417bfd472957068' alt='' style='margin:0;padding:0;border:none;' /></body>
+</html> 
+
+ ------------------ end of mail ------------------  
+
+
+2013-09-15 16:18:53 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/plugins/mailpress/mp-content/themes/EA/images/Sep-maillogo.jpg
+2013-09-15 16:18:53 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/05/BookWHeart450.jpg
+2013-09-15 16:18:53 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/03/windwoman.jpg
+2013-09-15 16:18:54 000000 -- MAILPRESS [NOTICE] - Disconnecting from embads (MP_Mail)
+2013-09-15 16:18:54 000000 -- MAILPRESS [NOTICE] - Disconnected (MP_Mail)
+2013-09-15 16:18:55 000000 -- MAILPRESS [NOTICE] - Connecting to embads (MP_Mail)
+2013-09-15 16:18:55 000000 -- MAILPRESS [NOTICE] - Connected (MP_Mail)
+2013-09-15 16:18:55 000000 -- MAILPRESS [NOTICE] - :::: Mail not saved as required ::::
+2013-09-15 16:18:55 000000 --  **** End   logging **** mp_mail *** level : 8191 **** status : TRUE 
+
+2013-09-15 16:19:41 000000 --  **** Start logging **** mp_mail *** level : 8191 **** (5.4) **** /wp-admin/options-general.php?page=mailpress_settings
+2013-09-15 16:19:41 000000 -- MAILPRESS [NOTICE] - :::: external recipient ::::
+2013-09-15 16:19:41 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::posts_where_paged() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 230 
+2013-09-15 16:19:41 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::posts_join_paged() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 230 
+2013-09-15 16:19:41 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:42 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_width - assumed 'force_max_width' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 112 
+2013-09-15 16:19:42 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_height - assumed 'force_max_height' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 113 
+2013-09-15 16:19:42 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:42 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:42 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:42 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_width - assumed 'force_max_width' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 112 
+2013-09-15 16:19:42 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_height - assumed 'force_max_height' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 113 
+2013-09-15 16:19:42 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:42 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:43 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:43 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:19:43 000000 --  
+
+ ------------------- start of mail -------------------   
+ From : Embroidery Advertisers <tyson@embroideryadvertisers.com>  
+ To   : Tyson Brooks <yahoogroups@tysonbrooks.net>  
+ Subject : Connection test : Embroidery Advertisers - Template : daily 
+   ------------------- plaintext -------------------  
+ Embroidery Advertisers
+Helping Build Your Business, One Stitch at a Time!
+
+
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+! Tatting 25 by Murphy’s Designs !
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/
+September 8, 2013
+
+	Tatting done with MYLAR in the machine embroidery hoop!  These are EASY for you to stitchout.  3 are for the 4×4 inch hoops & 3 are for the 5×7 inch hoops.  You’ll want to get them ALL.  Complete instructions included. 
+
+	For 4×4 inch (100 x 100 mm) & 5×7 inch (130 x 180 mm) hoop 
+
+	All designs are delivered as email attachment in Zip file. Join my newsletter to find out when I have new designs and exclusive offers. http://groups.yahoo.com/group/MurphysDesignsNews/join [http://groups.yahoo.com/group/MurphysDesignsNews/join] http://www.murphysdesigns.com/tatting_25.htm [http://www.murphysdesigns.com/tatting_25.htm] [ [ [http://www.murphysdesigns.com/tatting_25.htm] ] Tatted Bookmarks by Murphy’s Designs ] 
+
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+! Tatting 24 Crosses at Murphy’s Designs !
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/
+September 8, 2013
+
+	Tatting cross done in the machine embroidery hoop! These are easy for you to stitchout and have free-standing tatting - looks like you made it with a shuttle. Comes in 3 sizes! Complete instructions included. For 5x7 inch (130 x 180 mm) hoop All designs are delivered as email attachment in Zip file. Join my newsletter to find out when I have new designs and exclusive offers. http://groups.yahoo.com/group/MurphysDesignsNews/join [http://groups.yahoo.com/group/MurphysDesignsNews/join] http://www.murphysdesigns.com/tatting_24.htm [http://www.murphysdesigns.com/tatting_24.htm] 
+
+	 [http://www.murphysdesigns.com/tatting_24.htm] 
+
+	 Tatted Crosses by Murphy’s Designs 
+
+							this mail is brought to you by MailPress 
+
+ ------------------- text/html -------------------  
+ <!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Embroidery Advertisers > Connection test : Embroidery Advertisers - Template : daily > yahoogroups@tysonbrooks.net</title>
+<style type='text/css' media='all'>
+/*
+Theme Name: MailPress template
+Description: theme used as template
+*/
+
+
+td.mp_twitter_link a.mp_twitter_date {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link a.mp_twitter_date:hover {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link ul li a b {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link ul li a:hover b {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link a {
+text-decoration: none;
+color: #666;
+}
+td.mp_twitter_link a:hover {
+text-decoration: underline !important;
+color: #444 !important;
+}
+
+a.mp_twitter_author_id:hover {
+text-decoration: underline !important;
+color: #000 !important;
+}</style>
+<style type='text/css' media='all'>
+/*
+Theme Name: EA Theme
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+Template: _template
+*/
+p {
+	line-height:1.4em;
+	font-size:0.85em;
+}
+
+a.more-link {
+	color:#6D8C82;
+}
+img {
+	padding:5px;
+}
+</style>
+	</head>	<body>
+		<div style="color:#000;font-family: verdana,geneva;background:none repeat scroll 0 0 #f0f0f0;">
+			<div style="margin:0 auto;border:none;padding:0;width:960px;background:none repeat scroll 0 0 #fff;">
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;background:#000;height:60px;">	
+					<tr>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;text-align:left;">
+													<img src='Sep-maillogo.jpg' alt='img' />
+							Sep						</td>
+						<td style='width:50px;'></td>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;"></td>
+					</tr>
+				</table>
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:0;margin:0;height:70px;border-bottom:1px solid #C6D9E9;background:#DCFAF1;">
+					<tr>
+						<td style="padding:0 10px 0 0;margin:0;border:none;background:#6e6e6e;font-family:Georgia,Times,serif;color:#fff;font-size:30px;text-align:right;">
+							September 15, 2013						</td>
+					</tr>
+				</table>
+				<div  style="margin:0;padding:20px 10px;border:0;text-align:left;width:100%;">
+					<div  style="margin:0;padding:0;border:0;width:95%;float:left;">
+					<div style="float:right; font-size:12px; margin:5px;">All times listed in emails are based on mountain times, unless other wise stated.</div>
+					<div style="clear:both;"></div>
+<!-- end header --><h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">Whats in this issue of Embroidery Advertisers Daily News?</h2>
+				<ul style="padding-left:15px;">
+											<li style="list-style-type:disc;"><a style="font-family:verdana,geneva,Sans-Serif;font-size:11px;font-weight:bold;color:#6D8C82;text-decoration:none;" href="http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/" rel="bookmark">Tatting 25 by Murphy&#8217;s Designs</a></li>
+											<li style="list-style-type:disc;"><a style="font-family:verdana,geneva,Sans-Serif;font-size:11px;font-weight:bold;color:#6D8C82;text-decoration:none;" href="http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/" rel="bookmark">Tatting 24 Crosses at Murphy&#8217;s Designs</a></li>
+									</ul>
+
+<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:15px 20px 5px;">
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+					<a style="text-decoration:none;color:#333;" href="http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/" rel="bookmark" title="Permanent Link to Tatting 25 by Murphy&#8217;s Designs">
+Tatting 25 by Murphy&#8217;s Designs					</a>
+				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+				Posted by <a href="http://embroideryadvertisers.com/author/murphy/" title="Posts by murphy" rel="author">murphy</a>				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<div style="float:left;">
+	<!-- MailPress_mail_api start -->
+<img alt="Tatted Bookmarks by Murphy's Designs" src="http://embroideryadvertisers.com/wp-content/uploads/2013/05/BookWHeart450.jpg" style="width:129px;height:100px;" />
+<!-- MailPress_mail_api end --></div>
+<div style="float:right;width:80%;">
+<p>Tatting done with Mylar in the machine embroidery hoop!  These are easy for you to stitchout.  3 are for the 4&#215;4 inch hoops &amp; 3 are for the 5&#215;7 inch hoops.  You&#8217;ll want to get them ALL.  Complete instructions included. For 4&#215;4 inch (100 x 100 mm) &amp; 5&#215;7 inch (130 x 180 mm) hoop All designs are delivered &hellip; </p>
+<p><a class="more-link block-button" href="http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/">Continue reading &raquo;</a></p>
+</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+					<a style="text-decoration:none;color:#333;" href="http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/" rel="bookmark" title="Permanent Link to Tatting 24 Crosses at Murphy&#8217;s Designs">
+Tatting 24 Crosses at Murphy&#8217;s Designs					</a>
+				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+				Posted by <a href="http://embroideryadvertisers.com/author/murphy/" title="Posts by murphy" rel="author">murphy</a>				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<div style="float:left;">
+	<!-- MailPress_mail_api start -->
+<img class="aligncenter" title="All-3-W-flwr350" alt="All-3-W-flwr350" src="http://atw.typepad.com/.a/6a00d83453a63969e2017ee90be8c5970d-800wi" border="0" style="width:133px;height:100px;" />
+<!-- MailPress_mail_api end --></div>
+<div style="float:right;width:80%;">
+<p>Tatting cross done in the machine embroidery hoop! These are easy for you to stitchout and have free-standing tatting &#8211; looks like you made it with a shuttle. Comes in 3 sizes! Complete instructions included. For 5&#215;7 inch (130 x 180 mm) hoop All designs are delivered as email attachment in Zip file. Join my &hellip; </p>
+<p><a class="more-link block-button" href="http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/">Continue reading &raquo;</a></p>
+</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+<div style="clear:both;"></div><!-- start footer -->
+<div><center>
+Like what we are doing? Take a moment and give us some feedback, simply click on the link to go to the survey: <a href="http://embroideryadvertisers.com/survey/">http://embroideryadvertisers.com/survey/</a><br>
+
+<h3>This newsletter sponsored by:<br><a href="http://embroideryadvertisers.com/wp-content/plugins/adrotate/adrotate-out.php?track=MTIsMywwLGh0dHA6Ly93aW5kd29tYW4uY29tLy8/dXRtX3NvdXJjZT1FbWJyb2lkZXJ5K0FkdmVydGlzZXJzJnV0bV9tZWRpdW09VHJpdmlhK0FkJnV0bV9jYW1wYWlnbj1FbWJyb2lkZXJ5K0FkdmVydGlzZXJzK1RyaXZpYStBZA=" target="new"><img src="http://embroideryadvertisers.com/wp-content/uploads/2013/03/windwoman.jpg" /></a></h3>
+If you would like to sponsor this newsletter please check out our <a href="http://embroideryadvertisers.com/advertise-with-us/#newsletter">advertising page</a>.
+
+<center></div>
+				</div>
+				
+			</div>
+
+			
+			<div style='clear:both;'></div>
+			<div style="font-size:12px; margin:15px auto 5px auto; height:25px;">
+			<center>
+			Embroidery Advertisers &middot; 1501 Fox Park Dr. #13-0 &middot; West Jordan, Utah 84088
+			</center>
+			</div>
+			<div style="font-size:12px;">
+				<div style="float:left;">Embroidery Advertisers</div>
+				<div style="float:right;">Helping Build Your Business, One Stitch at a Time!</div>
+				<div style="clear:both;"></div>
+			            
+		</div>
+		</div>
+	</body>
+</html> 
+
+ ------------------ end of mail ------------------  
+
+
+2013-09-15 16:19:43 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/plugins/mailpress/mp-content/themes/EA/images/Sep-maillogo.jpg
+2013-09-15 16:19:43 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/05/BookWHeart450.jpg
+2013-09-15 16:19:43 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/03/windwoman.jpg
+2013-09-15 16:19:43 000000 -- MAILPRESS [NOTICE] - Disconnecting from embads (MP_Mail)
+2013-09-15 16:19:43 000000 -- MAILPRESS [NOTICE] - Disconnected (MP_Mail)
+2013-09-15 16:19:44 000000 -- MAILPRESS [NOTICE] - Connecting to embads (MP_Mail)
+2013-09-15 16:19:44 000000 -- MAILPRESS [NOTICE] - Connected (MP_Mail)
+2013-09-15 16:19:44 000000 -- MAILPRESS [NOTICE] - :::: Mail not saved as required ::::
+2013-09-15 16:19:44 000000 --  **** End   logging **** mp_mail *** level : 8191 **** status : TRUE 
+
+2013-09-15 16:20:20 000000 --  **** Start logging **** mp_mail *** level : 8191 **** (5.4) **** /wp-admin/options-general.php?page=mailpress_settings
+2013-09-15 16:20:20 000000 -- MAILPRESS [NOTICE] - :::: external recipient ::::
+2013-09-15 16:20:20 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::posts_where_paged() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 230 
+2013-09-15 16:20:20 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::posts_join_paged() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 230 
+2013-09-15 16:20:20 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:21 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_width - assumed 'force_max_width' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 112 
+2013-09-15 16:20:21 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_height - assumed 'force_max_height' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 113 
+2013-09-15 16:20:21 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:21 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:21 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:21 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_width - assumed 'force_max_width' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 112 
+2013-09-15 16:20:21 000000 -- PHP [E_NOTICE] 8 : Use of undefined constant force_max_height - assumed 'force_max_height' in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/mailpress/mp-includes/class/MP_mail_.class.php at line 113 
+2013-09-15 16:20:21 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:21 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:21 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:21 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:20:22 000000 --  
+
+ ------------------- start of mail -------------------   
+ From : Embroidery Advertisers <tyson@embroideryadvertisers.com>  
+ To   : Tyson Brooks <testemail@tysonbrooks.net>  
+ Subject : Connection test : Embroidery Advertisers - Template : daily 
+   ------------------- plaintext -------------------  
+ Embroidery Advertisers
+Helping Build Your Business, One Stitch at a Time!
+
+
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+! Tatting 25 by Murphy’s Designs !
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/
+September 8, 2013
+
+	Tatting done with MYLAR in the machine embroidery hoop!  These are EASY for you to stitchout.  3 are for the 4×4 inch hoops & 3 are for the 5×7 inch hoops.  You’ll want to get them ALL.  Complete instructions included. 
+
+	For 4×4 inch (100 x 100 mm) & 5×7 inch (130 x 180 mm) hoop 
+
+	All designs are delivered as email attachment in Zip file. Join my newsletter to find out when I have new designs and exclusive offers. http://groups.yahoo.com/group/MurphysDesignsNews/join [http://groups.yahoo.com/group/MurphysDesignsNews/join] http://www.murphysdesigns.com/tatting_25.htm [http://www.murphysdesigns.com/tatting_25.htm] [ [ [http://www.murphysdesigns.com/tatting_25.htm] ] Tatted Bookmarks by Murphy’s Designs ] 
+
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+! Tatting 24 Crosses at Murphy’s Designs !
+* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/
+September 8, 2013
+
+	Tatting cross done in the machine embroidery hoop! These are easy for you to stitchout and have free-standing tatting - looks like you made it with a shuttle. Comes in 3 sizes! Complete instructions included. For 5x7 inch (130 x 180 mm) hoop All designs are delivered as email attachment in Zip file. Join my newsletter to find out when I have new designs and exclusive offers. http://groups.yahoo.com/group/MurphysDesignsNews/join [http://groups.yahoo.com/group/MurphysDesignsNews/join] http://www.murphysdesigns.com/tatting_24.htm [http://www.murphysdesigns.com/tatting_24.htm] 
+
+	 [http://www.murphysdesigns.com/tatting_24.htm] 
+
+	 Tatted Crosses by Murphy’s Designs 
+
+							this mail is brought to you by MailPress 
+
+ ------------------- text/html -------------------  
+ <!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Embroidery Advertisers > Connection test : Embroidery Advertisers - Template : daily > testemail@tysonbrooks.net</title>
+<style type='text/css' media='all'>
+/*
+Theme Name: MailPress template
+Description: theme used as template
+*/
+
+
+td.mp_twitter_link a.mp_twitter_date {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link a.mp_twitter_date:hover {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link ul li a b {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link ul li a:hover b {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link a {
+text-decoration: none;
+color: #666;
+}
+td.mp_twitter_link a:hover {
+text-decoration: underline !important;
+color: #444 !important;
+}
+
+a.mp_twitter_author_id:hover {
+text-decoration: underline !important;
+color: #000 !important;
+}</style>
+<style type='text/css' media='all'>
+/*
+Theme Name: EA Theme
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+Template: _template
+*/
+p {
+	line-height:1.4em;
+	font-size:0.85em;
+}
+
+a.more-link {
+	color:#6D8C82;
+}
+img {
+	padding:5px;
+}
+</style>
+	</head>	<body>
+		<div style="color:#000;font-family: verdana,geneva;background:none repeat scroll 0 0 #f0f0f0;">
+			<div style="margin:0 auto;border:none;padding:0;width:960px;background:none repeat scroll 0 0 #fff;">
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;background:#000;height:60px;">	
+					<tr>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;text-align:left;">
+													<img src='Sep-maillogo.jpg' alt='img' />
+							Sep						</td>
+						<td style='width:50px;'></td>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;"></td>
+					</tr>
+				</table>
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:0;margin:0;height:70px;border-bottom:1px solid #C6D9E9;background:#DCFAF1;">
+					<tr>
+						<td style="padding:0 10px 0 0;margin:0;border:none;background:#6e6e6e;font-family:Georgia,Times,serif;color:#fff;font-size:30px;text-align:right;">
+							September 15, 2013						</td>
+					</tr>
+				</table>
+				<div  style="margin:0;padding:20px 10px;border:0;text-align:left;width:100%;">
+					<div  style="margin:0;padding:0;border:0;width:95%;float:left;">
+					<div style="float:right; font-size:12px; margin:5px;">All times listed in emails are based on mountain times, unless other wise stated.</div>
+					<div style="clear:both;"></div>
+<!-- end header --><h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">Whats in this issue of Embroidery Advertisers Daily News?</h2>
+				<ul style="padding-left:15px;">
+											<li style="list-style-type:disc;"><a style="font-family:verdana,geneva,Sans-Serif;font-size:11px;font-weight:bold;color:#6D8C82;text-decoration:none;" href="http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/" rel="bookmark">Tatting 25 by Murphy&#8217;s Designs</a></li>
+											<li style="list-style-type:disc;"><a style="font-family:verdana,geneva,Sans-Serif;font-size:11px;font-weight:bold;color:#6D8C82;text-decoration:none;" href="http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/" rel="bookmark">Tatting 24 Crosses at Murphy&#8217;s Designs</a></li>
+									</ul>
+
+<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:15px 20px 5px;">
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+					<a style="text-decoration:none;color:#333;" href="http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/" rel="bookmark" title="Permanent Link to Tatting 25 by Murphy&#8217;s Designs">
+Tatting 25 by Murphy&#8217;s Designs					</a>
+				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+				Posted by <a href="http://embroideryadvertisers.com/author/murphy/" title="Posts by murphy" rel="author">murphy</a>				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<div style="float:left;">
+	<!-- MailPress_mail_api start -->
+<img alt="Tatted Bookmarks by Murphy's Designs" src="http://embroideryadvertisers.com/wp-content/uploads/2013/05/BookWHeart450.jpg" style="width:129px;height:100px;" />
+<!-- MailPress_mail_api end --></div>
+<div style="float:right;width:80%;">
+<p>Tatting done with Mylar in the machine embroidery hoop!  These are easy for you to stitchout.  3 are for the 4&#215;4 inch hoops &amp; 3 are for the 5&#215;7 inch hoops.  You&#8217;ll want to get them ALL.  Complete instructions included. For 4&#215;4 inch (100 x 100 mm) &amp; 5&#215;7 inch (130 x 180 mm) hoop All designs are delivered &hellip; </p>
+<p><a class="more-link block-button" href="http://embroideryadvertisers.com/tatting-25-by-murphys-designs-2/">Continue reading &raquo;</a></p>
+</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+					<a style="text-decoration:none;color:#333;" href="http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/" rel="bookmark" title="Permanent Link to Tatting 24 Crosses at Murphy&#8217;s Designs">
+Tatting 24 Crosses at Murphy&#8217;s Designs					</a>
+				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+				Posted by <a href="http://embroideryadvertisers.com/author/murphy/" title="Posts by murphy" rel="author">murphy</a>				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<div style="float:left;">
+	<!-- MailPress_mail_api start -->
+<img class="aligncenter" title="All-3-W-flwr350" alt="All-3-W-flwr350" src="http://atw.typepad.com/.a/6a00d83453a63969e2017ee90be8c5970d-800wi" border="0" style="width:133px;height:100px;" />
+<!-- MailPress_mail_api end --></div>
+<div style="float:right;width:80%;">
+<p>Tatting cross done in the machine embroidery hoop! These are easy for you to stitchout and have free-standing tatting &#8211; looks like you made it with a shuttle. Comes in 3 sizes! Complete instructions included. For 5&#215;7 inch (130 x 180 mm) hoop All designs are delivered as email attachment in Zip file. Join my &hellip; </p>
+<p><a class="more-link block-button" href="http://embroideryadvertisers.com/tatting-24-crosses-at-murphys-designs-2/">Continue reading &raquo;</a></p>
+</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+<div style="clear:both;"></div><!-- start footer -->
+<div><center>
+Like what we are doing? Take a moment and give us some feedback, simply click on the link to go to the survey: <a href="http://embroideryadvertisers.com/survey/">http://embroideryadvertisers.com/survey/</a><br>
+
+<h3>This newsletter sponsored by:<br><a href="http://embroideryadvertisers.com/wp-content/plugins/adrotate/adrotate-out.php?track=MTIsMywwLGh0dHA6Ly93aW5kd29tYW4uY29tLy8/dXRtX3NvdXJjZT1FbWJyb2lkZXJ5K0FkdmVydGlzZXJzJnV0bV9tZWRpdW09VHJpdmlhK0FkJnV0bV9jYW1wYWlnbj1FbWJyb2lkZXJ5K0FkdmVydGlzZXJzK1RyaXZpYStBZA=" target="new"><img src="http://embroideryadvertisers.com/wp-content/uploads/2013/03/windwoman.jpg" /></a></h3>
+If you would like to sponsor this newsletter please check out our <a href="http://embroideryadvertisers.com/advertise-with-us/#newsletter">advertising page</a>.
+
+<center></div>
+				</div>
+				
+			</div>
+
+			
+			<div style='clear:both;'></div>
+			<div style="font-size:12px; margin:15px auto 5px auto; height:25px;">
+			<center>
+			Embroidery Advertisers &middot; 1501 Fox Park Dr. #13-0 &middot; West Jordan, Utah 84088
+			</center>
+			</div>
+			<div style="font-size:12px;">
+				<div style="float:left;">Embroidery Advertisers</div>
+				<div style="float:right;">Helping Build Your Business, One Stitch at a Time!</div>
+				<div style="clear:both;"></div>
+			            
+		</div>
+		</div>
+	</body>
+</html> 
+
+ ------------------ end of mail ------------------  
+
+
+2013-09-15 16:20:22 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/plugins/mailpress/mp-content/themes/EA/images/Sep-maillogo.jpg
+2013-09-15 16:20:22 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/05/BookWHeart450.jpg
+2013-09-15 16:20:22 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/03/windwoman.jpg
+2013-09-15 16:20:22 000000 -- MAILPRESS [NOTICE] - Disconnecting from embads (MP_Mail)
+2013-09-15 16:20:22 000000 -- MAILPRESS [NOTICE] - Disconnected (MP_Mail)
+2013-09-15 16:20:23 000000 -- MAILPRESS [NOTICE] - Connecting to embads (MP_Mail)
+2013-09-15 16:20:23 000000 -- MAILPRESS [NOTICE] - Connected (MP_Mail)
+2013-09-15 16:20:23 000000 -- MAILPRESS [NOTICE] - :::: Mail not saved as required ::::
+2013-09-15 16:20:23 000000 --  **** End   logging **** mp_mail *** level : 8191 **** status : TRUE 
+
+2013-09-15 16:21:22 000000 --  **** Start logging **** mp_mail *** level : 8191 **** (5.4) **** /wp-admin/admin.php?page=mailpress_write
+2013-09-15 16:21:22 000000 -- MAILPRESS [NOTICE] - :::: external recipient ::::
+2013-09-15 16:21:22 000000 -- PHP [E_STRICT] 2048 : call_user_func_array() expects parameter 1 to be a valid callback, non-static method WordPressAccessControl::remove_excerpt() should not be called statically in /home/tbrooks/sites/embroideryadvertisers.com/wp-includes/plugin.php at line 173 
+2013-09-15 16:21:22 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-user-frontend/wpuf-payment.php at line 55 
+2013-09-15 16:21:22 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-eMember/wp_eMember1.php at line 1173 
+2013-09-15 16:21:22 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-eMember/wp_eMember1.php at line 1174 
+2013-09-15 16:21:22 000000 -- PHP [E_NOTICE] 8 : Trying to get property of non-object in /home/tbrooks/sites/embroideryadvertisers.com/wp-content/plugins/wp-eMember/wp_eMember1.php at line 1176 
+2013-09-15 16:21:22 000000 --  
+
+ ------------------- start of mail -------------------   
+ From : tyson_brooks <tyson@embroideryadvertisers.com>  
+ To   : Tyson Brooks <testemail@tysonbrooks.net>  
+ Subject : Testign 123 
+   ------------------- plaintext -------------------  
+ Embroidery Advertisers
+Helping Build Your Business, One Stitch at a Time!
+
+* ~~~~~~~~~~~ *
+! Testign 123 !
+* ~~~~~~~~~~~ *
+September 15, 2013
+
+
+
+							this mail is brought to you by MailPress 
+
+ ------------------- text/html -------------------  
+ <!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Embroidery Advertisers > Testign 123 > testemail@tysonbrooks.net</title>
+<style type='text/css' media='all'>
+/*
+Theme Name: MailPress template
+Description: theme used as template
+*/
+
+
+td.mp_twitter_link a.mp_twitter_date {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link a.mp_twitter_date:hover {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link ul li a b {
+text-decoration: none;
+color: #999;
+}
+td.mp_twitter_link ul li a:hover b {
+text-decoration: underline !important;
+color: #777 !important;
+}
+
+td.mp_twitter_link a {
+text-decoration: none;
+color: #666;
+}
+td.mp_twitter_link a:hover {
+text-decoration: underline !important;
+color: #444 !important;
+}
+
+a.mp_twitter_author_id:hover {
+text-decoration: underline !important;
+color: #000 !important;
+}</style>
+<style type='text/css' media='all'>
+/*
+Theme Name: EA Theme
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Tyson Brooks
+Author URI: http://tysonbrooks.net
+Template: _template
+*/
+p {
+	line-height:1.4em;
+	font-size:0.85em;
+}
+
+a.more-link {
+	color:#6D8C82;
+}
+img {
+	padding:5px;
+}
+</style>
+	</head>	<body>
+		<div style="color:#000;font-family: verdana,geneva;background:none repeat scroll 0 0 #f0f0f0;">
+			<div style="margin:0 auto;border:none;padding:0;width:960px;background:none repeat scroll 0 0 #fff;">
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;background:#000;height:60px;">	
+					<tr>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;text-align:left;">
+													<img src='Sep-maillogo.jpg' alt='img' />
+							Sep						</td>
+						<td style='width:50px;'></td>
+						<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;"></td>
+					</tr>
+				</table>
+				<table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:0;margin:0;height:70px;border-bottom:1px solid #C6D9E9;background:#DCFAF1;">
+					<tr>
+						<td style="padding:0 10px 0 0;margin:0;border:none;background:#6e6e6e;font-family:Georgia,Times,serif;color:#fff;font-size:30px;text-align:right;">
+							September 15, 2013						</td>
+					</tr>
+				</table>
+				<div  style="margin:0;padding:20px 10px;border:0;text-align:left;width:100%;">
+					<div  style="margin:0;padding:0;border:0;width:95%;float:left;">
+					<div style="float:right; font-size:12px; margin:5px;">All times listed in emails are based on mountain times, unless other wise stated.</div>
+					<div style="clear:both;"></div>
+<!-- end header --><table style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;width:100%;padding:15px 20px 5px;">
+	<tr>
+		<td style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;margin:0;padding:0;border:none;color:#333333;text-align:left;font-family:Verdana,Sans-Serif;">
+			<div style="margin:0pt 0pt 10px;padding:0;border:none;text-align:justify;">
+				<h2 style="margin:0;padding:0;border:none;color:#333;font-size:1.4em;font-weight:bold;font-family:Verdana,Sans-Serif;">
+Testign 123				</h2>
+				<small style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;line-height:2em;color:#777;font-size:0.7em;font-family:Arial,Sans-Serif;">
+September 15, 2013				</small>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+<p>test</p>
+				</div>
+				<div style="border:none;border-spacing: 0px;border-collapse: collapse;margin:0;padding:0;">
+&#160;				</div>
+			</div>
+		</td>
+	</tr>
+</table><!-- start footer -->
+<div><center>
+Like what we are doing? Take a moment and give us some feedback, simply click on the link to go to the survey: <a href="http://embroideryadvertisers.com/survey/">http://embroideryadvertisers.com/survey/</a><br>
+
+<h3>This newsletter sponsored by:<br><a href="http://embroideryadvertisers.com/wp-content/plugins/adrotate/adrotate-out.php?track=MTIsMywwLGh0dHA6Ly93aW5kd29tYW4uY29tLy8/dXRtX3NvdXJjZT1FbWJyb2lkZXJ5K0FkdmVydGlzZXJzJnV0bV9tZWRpdW09VHJpdmlhK0FkJnV0bV9jYW1wYWlnbj1FbWJyb2lkZXJ5K0FkdmVydGlzZXJzK1RyaXZpYStBZA=" target="new"><img src="http://embroideryadvertisers.com/wp-content/uploads/2013/03/windwoman.jpg" /></a></h3>
+If you would like to sponsor this newsletter please check out our <a href="http://embroideryadvertisers.com/advertise-with-us/#newsletter">advertising page</a>.
+
+<center></div>
+				</div>
+				
+			</div>
+
+			
+			<div style='clear:both;'></div>
+			<div style="font-size:12px; margin:15px auto 5px auto; height:25px;">
+			<center>
+			Embroidery Advertisers &middot; 1501 Fox Park Dr. #13-0 &middot; West Jordan, Utah 84088
+			</center>
+			</div>
+			<div style="font-size:12px;">
+				<div style="float:left;">Embroidery Advertisers</div>
+				<div style="float:right;">Helping Build Your Business, One Stitch at a Time!</div>
+				<div style="clear:both;"></div>
+			            
+		</div>
+		</div>
+	</body>
+</html> 
+
+ ------------------ end of mail ------------------  
+
+
+2013-09-15 16:21:22 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/plugins/mailpress/mp-content/themes/EA/images/Sep-maillogo.jpg
+2013-09-15 16:21:22 000000 -- MAILPRESS [NOTICE] - Image found : wp-content/uploads/2013/03/windwoman.jpg
+2013-09-15 16:21:22 000000 -- MAILPRESS [NOTICE] - Disconnecting from embads (MP_Mail)
+2013-09-15 16:21:22 000000 -- MAILPRESS [NOTICE] - Disconnected (MP_Mail)
+2013-09-15 16:21:23 000000 -- MAILPRESS [NOTICE] - Connecting to embads (MP_Mail)
+2013-09-15 16:21:23 000000 -- MAILPRESS [NOTICE] - Connected (MP_Mail)
+2013-09-15 16:21:23 000000 -- MAILPRESS [NOTICE] - :::: MAIL SAVED ::::
+2013-09-15 16:21:23 000000 --  **** End   logging **** mp_mail *** level : 8191 **** status : TRUE 

@@ -58,12 +58,15 @@ if(!is_array($meta_array)) $meta_array = array();
 		</tr>
 	    <tr>
 			<th valign="top"><?php _e('Mode', 'adrotate'); ?></strong></th>
-			<td colspan="3">
+			<td>
 		       	<select tabindex="2" name="adrotate_modus">
 		        	<option value="0" <?php if($edit_group->modus == 0) { echo 'selected'; } ?>><?php _e('Default - Show one ad at a time', 'adrotate'); ?></option>
 		        	<option value="1" <?php if($edit_group->modus == 1) { echo 'selected'; } ?>><?php _e('Dynamic Mode - Show a different ad every few seconds', 'adrotate'); ?></option>
 		        	<option value="2" <?php if($edit_group->modus == 2) { echo 'selected'; } ?>><?php _e('Block Mode - Show a block of ads', 'adrotate'); ?></option>
 		        </select> 
+			</td>
+			<td colspan="2">
+		        <p><em><?php _e('\'Dynamic\' and \'Block\' mode require \'jQuery\' and \'jQuery Showoff\' to be loaded. You can enable this in AdRotate Settings.', 'adrotate'); ?></em></p>
 			</td>
 		</tr>
 		</tbody>

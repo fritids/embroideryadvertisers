@@ -23,7 +23,7 @@ function adrotate_activate() {
 		adrotate_check_upgrade();
 
 		// Set up some schedules
-		$firstrun = date('U') + 3600;
+		$firstrun = adrotate_date_start('day');
 		if (!wp_next_scheduled('adrotate_clean_trackerdata')) // Periodically clean trackerdata
 			wp_schedule_event($firstrun, 'twicedaily', 'adrotate_clean_trackerdata');
 

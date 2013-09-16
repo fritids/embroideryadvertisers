@@ -1,2 +1,0 @@
-[28-Jul-2013 13:57:59 UTC] PHP Fatal error:  Call to undefined function wp_get_current_user() in /home2/tysonbro/public_html/embads/wp-content/plugins/lightirc/chat.php on line 12
-[07-Aug-2013 14:51:21 UTC] PHP Parse error:  syntax error, unexpected ')' in /home2/tysonbro/public_html/embads/wp-content/plugins/m7-customize/plugin.php on line 253

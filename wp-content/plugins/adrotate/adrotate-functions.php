@@ -143,6 +143,25 @@ function adrotate_rand($length = 8) {
 }
 
 /*-------------------------------------------------------------
+ Name:      adrotate_shuffle
+
+ Purpose:   Randomize an array but keep keys intact
+ Receive:   $length
+ Return:    $result
+ Since:		3.8.8.3
+-------------------------------------------------------------*/
+function adrotate_shuffle($array) { 
+	if(!is_array($array)) return $array; 
+	$keys = array_keys($array); 
+	shuffle($keys); 
+	$shuffle = array(); 
+	foreach($keys as $key) { 
+		$shuffle[$key] = $array[$key]; 
+	}
+	return $shuffle; 
+}
+
+/*-------------------------------------------------------------
  Name:      adrotate_select_categories
 
  Purpose:   Create scrolling menu of all categories.
@@ -460,7 +479,6 @@ function adrotate_check_config() {
 	if(empty($config['widgetalign'])) $config['widgetalign'] = 'N';
 	if(empty($config['w3caching'])) $config['w3caching'] = 'N';
 	if(empty($config['jquery'])) $config['jquery'] = 'N';
-	if(empty($config['jtools'])) $config['jtools'] = 'N';
 	if(empty($config['jshowoff'])) $config['jshowoff'] = 'N';
 	if(empty($config['impression_timer'])) $config['impression_timer'] = '10';
 	update_option('adrotate_config', $config);
@@ -615,13 +633,9 @@ function adrotate_mail_beta() {
  Since:		3.6
 -------------------------------------------------------------*/
 function adrotate_dashboard_scripts() {
-	wp_enqueue_script('media-upload');
-	wp_enqueue_script('thickbox');
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('raphael', plugins_url('/library/raphael-min.js', __FILE__), array('jquery'));
 	wp_enqueue_script('elycharts', plugins_url('/library/elycharts.min.js', __FILE__), array('jquery', 'raphael'));
-
-	wp_enqueue_style('thickbox');
 }
 
 /*-------------------------------------------------------------

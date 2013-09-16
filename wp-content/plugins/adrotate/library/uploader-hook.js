@@ -1,6 +1,6 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function(){
 	var custom_uploader;
-	$('#adrotate_image_button').click(function(e) {
+	jQuery('#adrotate_image_button').click(function(e) {
 		e.preventDefault();
 		if (custom_uploader) {
 			custom_uploader.open();
@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
 		
 		custom_uploader.on('select', function() {
 			attachment = custom_uploader.state().get('selection').first().toJSON();
-			$('#adrotate_image').val(attachment.url);
+			jQuery('#adrotate_image').val(attachment.url);
 		});
 		
 		custom_uploader.open();

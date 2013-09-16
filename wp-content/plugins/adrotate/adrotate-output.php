@@ -180,32 +180,46 @@ function adrotate_group($group_ids, $fallback = 0, $weight = 0) {
 					$wrapper_after = str_replace('%id%', $group_array[0], $group->wrapper_after);
 
 					if($group->modus == 1) { // Slider ads
-						$output .= '<div id="g-'.$group->id.'">';
-						$output .= '	<ul id="gs-'.$group->id.'">';
+						$selected = adrotate_shuffle($selected);
+						$output .= '<div id="g-'.$group->id.'" class="g">';
 						foreach($selected as $key => $value) {
-							$output .= '<li class="a-'.$value['id'].' g-'.$value['group'].'">';
+							$output .= '<div id="a-'.$value['id'].'" class="a-'.$value['group'].'">';
 							if($wrapper_before != '') $output .= stripslashes(html_entity_decode($wrapper_before, ENT_QUOTES));
-							$output .= adrotate_ad($value['id'], 0, $value['group']);
+							$output .= adrotate_ad($key, 0, $value['group']);
 							if($wrapper_after != '') $output .= stripslashes(html_entity_decode($wrapper_after, ENT_QUOTES));
-							$output .= '</li>';
+							$output .= '</div>';
 						}
-						$output .= '	</ul>';
 						$output .= '</div><div class="clear"></div>';
 					} else if($group->modus == 2) { // Block of ads
 						$block_count = $group->gridcolumns * $group->gridrows;
 						if($array_count < $block_count) $block_count = $array_count;
-					
-						$output .= '<div id="b-'.$group->id.'" class="block_outer b-'.$group->id.'"><ul class="b-'.$group->id.'">';
+						$output .= '<div id="b-'.$group->id.'" class="block_outer b b-'.$group->id.'">';
+						$j = 1;
 						for($i=0;$i<$block_count;$i++) {
 							$banner_id = array_rand($selected, 1);
-							$output .= '<li id="b-'.$group->id.' a-'.$banner_id.' g-'.$selected[$banner_id]['group'].'" class="block_inner">';
+							$output .= '<div id="a-'.$banner_id.'" class="block_inner a a-'.$group->id;
+							if($group->gridcolumns == 1) {
+								$output .= ' clear';						
+							} else if($j == $group->gridcolumns) {
+								$output .= ' clear_r';
+								$j = 1;
+							} else if($j == 1) {
+								$output .= ' clear_l';
+								$j++;
+							} else {
+								$j++;
+							}
+							$output .= '">';
+	
 							if($wrapper_before != '') $output .= stripslashes(html_entity_decode($wrapper_before, ENT_QUOTES));
 							$output .= adrotate_ad($banner_id, 0, $selected[$banner_id]['group']);
 							if($wrapper_after != '') $output .= stripslashes(html_entity_decode($wrapper_after, ENT_QUOTES));
-							$output .= '</li>';
+							$output .= '</div>';
+		
 							$selected = array_diff_key($selected, array($banner_id => 0));
 						}
-						$output .= '</ul></div><div class="clear"></div>';
+						$output .= '</div><div class="clear"></div>';
+						$selected = array_diff_key($selected, array($banner_id => 0));
 					} else { // Default (single ad)
 						$banner_id = array_rand($selected, 1);
 						if($wrapper_before != '') $output .= stripslashes(html_entity_decode($wrapper_before, ENT_QUOTES));
@@ -418,7 +432,7 @@ function adrotate_ad_output($id, $group = 0, $block = 0, $bannercode, $tracker, 
 			$meta = base64_encode("$id,$group,$block,$link");
 		}
 
-		$url = add_query_arg('track', $meta, WP_CONTENT_URL."/plugins/adrotate/adrotate-out.php");
+		$url = add_query_arg('track', $meta, plugins_url("/adrotate-out.php", __FILE__));
 		if($preview == true) $url = add_query_arg('preview', '1', $url);
 		$banner_output = str_replace('%link%', $url, $banner_output);
 	} else {
@@ -445,7 +459,6 @@ function adrotate_custom_scripts() {
 	global $adrotate_config;
 	
 	if($adrotate_config['jquery'] == 'Y') wp_enqueue_script('jquery');
-	if($adrotate_config['jtools'] == 'Y') wp_enqueue_script('jquerytools-min', plugins_url('/library/jquery.tools.min.js', __FILE__), array('jquery'), '1.2.7');
 	if($adrotate_config['jshowoff'] == 'Y') wp_enqueue_script('jshowoff-min', plugins_url('/library/jquery.jshowoff.min.js', __FILE__), array('jquery'), '0.1.2');
 }
 
@@ -483,38 +496,58 @@ function adrotate_custom_head() {
 
 	$groups = $wpdb->get_results("SELECT `id`, `modus`, `gridrows`, `gridcolumns`, `adwidth`, `adheight`, `admargin`, `adspeed` FROM `".$wpdb->prefix."adrotate_groups` WHERE `name` != '' AND `modus` > 0 ORDER BY `id` ASC;");
 	if($groups) {
-		$output .= "<!-- AdRotate JS -->\n";
-		$output .= "<script type=\"text/javascript\">\n";
-		$output .= "$(document).ready(function(){\n";
+		$array_js = $array_css = array();
 		foreach($groups as $group) {
-			if($group->modus == 1) $output .= "$('#gs-".$group->id."').jshowoff({ links: false, controls: false, effect: 'fade', changeSpeed: 300, speed: ".$group->adspeed.", hoverPause: true });\n";
-		}
-		$output .= "});\n";
-		$output .= "</script>\n";
-		$output .= "<!-- /AdRotate JS -->\n\n";
-	
-		$output .= "<!-- AdRotate CSS -->\n";
-		$output .= "<style type=\"text/css\" media=\"screen\">\n";
-		$output .= ".clear { clear:both; }\n";
-		foreach($groups as $group) {
-			($group->adwidth == 'auto') ? $adwidth = 'auto' : $adwidth = $group->adwidth.'px';	
-			($group->adheight == 'auto') ? $adheight = 'auto' : $adheight = $group->adheight.'px';	
+			$adwidth = $gridwidth = $adheight = $gridheight = 'auto';
+			if($group->adwidth != 'auto') {
+				$adwidth = $group->adwidth.'px'; 
+				if($group->modus == 2) $gridwidth = $group->gridcolumns*((2*$group->admargin)+$group->adwidth).'px';
+			}
+			if($group->adheight != 'auto') {
+				$adheight = $group->adheight.'px';
+				if($group->modus == 2) $gridheight = $group->gridrows*((2*$group->admargin)+$group->adheight).'px';
+			}
+
 			if($group->modus == 1) {
-				$output .= "#g-".$group->id." { position:relative; overflow:hidden; width:".$adwidth."; height:".$adheight."; }\n";
-				$output .= "#gs-".$group->id." ul, #gs-".$group->id." li { padding:0; margin:".$group->admargin."px; }\n";
+				$array_js[] = "\tjQuery('#g-".$group->id."').jshowoff({ links: false, controls: false, effect: 'fade', changeSpeed: 300, speed: ".$group->adspeed.", hoverPause: true });\n";
 			}
 			if($group->modus == 2) {
-				$gridwidth = $group->gridcolumns*((2*$group->admargin)+$group->adwidth+2).'px';
-				$gridheight = $group->gridrows*((2*$group->admargin)+$group->adwidth+2).'px';
-				$output .= "div.b-".$group->id." { padding:0; margin:0; overflow:hidden; list-style:none; min-height:".$adheight."; max-height:".$gridheight."; min-width:".$adwidth."; max-width:".$gridwidth."; }\n";
-				$output .= ".b-".$group->id." li { float:left; padding:0; margin:".$group->admargin."px; height:".$adheight."; width:".$adwidth."; }\n";
-				$output .= ".b-".$group->id." lu { padding:0; margin:0 auto; width:100%; height:100%; text-align:center; }\n";
+				$array_css[] = "\t.b-".$group->id." { min-height:".$adheight."; max-height:".$gridheight."; min-width:".$adwidth."; max-width:".$gridwidth."; }\n";
 			}
+			$array_css[] = "\t.a-".$group->id." { margin:".$group->admargin."px; width:".$adwidth."; height:".$adheight."; }\n";
 			unset($group, $adwidth, $adheight, $gridwidth, $gridheight);
 		}
-		$output .= "</style>\n";
-		$output .= "<!-- /AdRotate CSS -->\n\n";
 		unset($groups);
+
+		if($array_js) {
+			$output .= "<!-- AdRotate JS -->\n";
+			$output .= "<script type=\"text/javascript\">\n";
+			$output .= "jQuery(document).ready(function(){\n";
+			foreach($array_js as $js) {
+				$output .= $js;
+			}
+			$output .= "});\n";
+			$output .= "</script>\n";
+			$output .= "<!-- /AdRotate JS -->\n\n";
+			unset($array_js);
+		}
+
+		if($array_css) {
+			$output .= "<!-- AdRotate CSS -->\n";
+			$output .= "<style type=\"text/css\" media=\"screen\">\n";
+			$output .= "\t.g { padding:0; position:relative; overflow:hidden; width:auto; height:auto; }\n";
+			$output .= "\t.b { padding:0; margin:0; overflow:hidden; clear:none; }\n";
+			$output .= "\t.a { clear:none; float:left; }\n";
+			foreach($array_css as $css) {
+				$output .= $css;
+			}
+			$output .= "\t.clear { clear:both; }\n";
+			$output .= "\t.clear_l { clear:left; }\n";
+			$output .= "\t.clear_r { clear:right; }\n";
+			$output .= "</style>\n";
+			$output .= "<!-- /AdRotate CSS -->\n\n";
+			unset($array_css);
+		}
 	}
 	echo $output;
 }
@@ -807,7 +840,7 @@ function adrotate_credits() {
 	echo '</ul></td>';
 
 	echo '<td style="border-left:1px #ddd solid;"><ul>';
-	echo '	<li><a href="http://www.ajdg.net" title="AJdG Solutions"><img src="'.WP_CONTENT_URL.'/plugins/adrotate/images/ajdg-logo-100x60.png" alt="ajdg-logo-100x60" width="100" height="60" align="left" style="padding: 0 10px 10px 0;" /></a>';
+	echo '	<li><a href="http://www.ajdg.net" title="AJdG Solutions"><img src="'.plugins_url('/images/ajdg-logo-100x60.png', __FILE__).'" alt="ajdg-logo-100x60" width="100" height="60" align="left" style="padding: 0 10px 10px 0;" /></a>';
 	echo '	<a href="http://www.ajdg.net" title="AJdG Solutions">AJdG Solutions</a> - '.__('Your one stop for Webdevelopment, consultancy and anything WordPress! When you need a custom plugin, theme customizations or have your site moved/migrated entirely. Find out more about what I can do for you on my website!', 'adrotate').' '.__('Visit the', 'adrotate').' <a href="http://www.ajdg.net" target="_blank">'.__('AJdG Solutions', 'adrotate').'</a> '.__('website', 'adrotate').'.</li>';
 	echo '</ul></td>';
 	echo '</tr>';

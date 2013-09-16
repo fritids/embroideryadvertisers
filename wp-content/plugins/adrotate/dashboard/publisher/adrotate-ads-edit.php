@@ -24,8 +24,11 @@ $groups			= $wpdb->get_results("SELECT * FROM `".$wpdb->prefix."adrotate_groups`
 $schedules		= $wpdb->get_row("SELECT * FROM `".$wpdb->prefix."adrotate_schedule` WHERE `ad` = '$edit_banner->id';"); 
 $linkmeta		= $wpdb->get_results("SELECT `group` FROM `".$wpdb->prefix."adrotate_linkmeta` WHERE `ad` = '$edit_banner->id' AND `block` = 0 AND `user` = 0;");
 
-list($sday, $smonth, $syear, $shour, $sminute) = split(" ", date("d m Y H i", $schedules->starttime));
-list($eday, $emonth, $eyear, $ehour, $eminute) = split(" ", date("d m Y H i", $schedules->stoptime));
+wp_enqueue_media();
+wp_enqueue_script('uploader-hook', WP_PLUGIN_URL.'/'.ADROTATE_FOLDER.'/library/uploader-hook.js', array('jquery'));
+
+list($sday, $smonth, $syear, $shour, $sminute) = explode(" ", date("d m Y H i", $schedules->starttime));
+list($eday, $emonth, $eyear, $ehour, $eminute) = explode(" ", date("d m Y H i", $schedules->stoptime));
 
 $meta_array = '';
 foreach($linkmeta as $meta) {
@@ -99,30 +102,6 @@ if($edit_banner->imagetype == "field") {
 }		
 ?>
 
-<script language="JavaScript">
-jQuery(document).ready(function() {
-	jQuery('#adrotate_image_button').click(function() {
-		formfield = jQuery('#adrotate_image').attr('name');
-		tb_show('', 'media-upload.php?type=image&TB_iframe=true');
-		return false;
-	});
-	
-	window.send_to_editor = function(html) {
-		imgurl = jQuery('img',html).attr('src');
-		jQuery('#adrotate_image').val(imgurl);
-		tb_remove();
-	}
-});
-</script>
-
-	<?php
-	if($adrotate_debug['dashboard'] == true) {
-		echo "<strong>[DEBUG]</strong>";
-		echo "Ad Specs: <pre>";
-		print_r($edit_banner); 
-		echo "</pre>"; 
-	}
-	?>
 	<form method="post" action="admin.php?page=adrotate-ads">
 	<?php wp_nonce_field('adrotate_save_ad','adrotate_nonce'); ?>
 	<input type="hidden" name="adrotate_username" value="<?php echo $userdata->user_login;?>" />
@@ -217,40 +196,6 @@ jQuery(document).ready(function() {
 
 		<thead>
 		<tr>
-			<th colspan="4" bgcolor="#DDD"><?php _e('Advertiser & Budget', 'adrotate'); ?> (<?php adrotate_pro_notice('t'); ?>)</th>
-		</tr>
-		</thead>
-
-		<tbody>
-      	<tr>
-	        <th valign="top">&nbsp;</th>
-	        <td colspan="3">
-	        	<p><em>Couple adverts to users. Assign going rates per click or impression and offer your advertisers insight in their stats!</em></p>	        	
-			</td>
-      	</tr>
-      	</tbody>
-
-		<thead>
-		<tr>
-			<th colspan="4"><?php _e('GeoLocation', 'adrotate'); ?> (<?php adrotate_pro_notice('t'); ?>)</th>
-		</tr>
-		</thead>
-			
-		<tbody>
-	    <tr>
-			<th valign="top"><?php _e('Cities:', 'adrotate'); ?></strong></th>
-			<td colspan="3"><textarea tabindex="8" name="adrotate_geo_cities" cols="65" rows="3" disabled>New York, Amsterdam, Shanghai</textarea></td>
-		</tr>
-	    <tr>
-			<th valign="top"><?php _e('Countries:', 'adrotate'); ?></strong></th>
-	        <td colspan="3">
-	        	<p><em>Decide where your adverts show with targeted adverts. Check up on your visitors, have AdRotate see where they're from and show adverts that apply to them!<br />AdRotate Pro uses geoPlugin, which includes GeoLite data created by MaxMind, available from <a href="http://www.maxmind.com" target="_blank">maxmind.com</a>.</em></p>	        	
-	        </td>
-		</tr>
-		</tbody>
-
-		<thead>
-		<tr>
 			<th colspan="4" bgcolor="#DDD"><?php _e('Advanced (Everything below is optional)', 'adrotate'); ?></th>
 		</tr>
 		</thead>
@@ -272,25 +217,84 @@ jQuery(document).ready(function() {
 	        <th valign="top"><?php _e('Banner image:', 'adrotate'); ?></th>
 			<td colspan="3">
 				<label for="adrotate_image">
-					<?php _e('Media:', 'adrotate'); ?> <input tabindex="7" size="100" id="adrotate_image" type="text" name="adrotate_image" value="<?php echo $image_field; ?>" /> <input tabindex="8" id="adrotate_image_button" type="button" value="<?php _e('Select Image', 'adrotate'); ?>" /><br />
-					<?php _e('- OR -', 'adrotate'); ?><br />
+					<?php _e('Media:', 'adrotate'); ?> <input tabindex="7" id="adrotate_image" type="text" size="100" name="adrotate_image" value="<?php echo $image_field; ?>" /> <input tabindex="8" id="adrotate_image_button" class="button" type="button" value="<?php _e('Select Banner', 'adrotate'); ?>" />
+				</label><br />
+				<?php _e('- OR -', 'adrotate'); ?><br />
+				<label for="adrotate_image_dropdown">
 					<?php _e('Banner folder:', 'adrotate'); ?> <select tabindex="9" name="adrotate_image_dropdown" style="min-width: 200px;">
    						<option value=""><?php _e('No image selected', 'adrotate'); ?></option>
 						<?php echo adrotate_folder_contents($image_dropdown); ?>
 					</select><br />
-					<em><?php _e('Use %image% in the code. Accepted files are:', 'adrotate'); ?> jpg, jpeg, gif, png, swf and flv. <?php _e('Use either the text field or the dropdown. If the textfield has content that field has priority.', 'adrotate'); ?></em>
 				</label>
+				<em><?php _e('Use %image% in the code. Accepted files are:', 'adrotate'); ?> jpg, jpeg, gif, png, swf and flv. <?php _e('Use either the text field or the dropdown. If the textfield has content that field has priority.', 'adrotate'); ?></em>
 			</td>
 		</tr>
       	<tr>
 		    <th valign="top"><?php _e('Weight:', 'adrotate'); ?></th>
-	        <td colspan="3">
-	        	<p><?php adrotate_pro_notice(); ?></p>
-	        	<p><em>Give adverts better visibility in a group. Prioritize!</em></p>
+	        <td colspan="2">
+	        	<label for="adrotate_weight">
+	        	&nbsp;<input type="radio" name="adrotate_weight" value="2" disabled />&nbsp;&nbsp;&nbsp;2, <?php _e('Barely visible', 'adrotate'); ?><br />
+	        	&nbsp;<input type="radio" name="adrotate_weight" value="4" disabled />&nbsp;&nbsp;&nbsp;4, <?php _e('Less than average', 'adrotate'); ?><br />
+	        	&nbsp;<input type="radio" name="adrotate_weight" value="6" checked disabled />&nbsp;&nbsp;&nbsp;6, <?php _e('Normal coverage', 'adrotate'); ?><br />
+	        	&nbsp;<input type="radio" name="adrotate_weight" value="8" disabled />&nbsp;&nbsp;&nbsp;8, <?php _e('More than average', 'adrotate'); ?><br />
+	        	&nbsp;<input type="radio" name="adrotate_weight" value="10" disabled />&nbsp;&nbsp;&nbsp;10, <?php _e('Best visibility', 'adrotate'); ?>
+				</label>
+	        </td>
+	        <td>
+	        	<br /><?php adrotate_pro_notice(); ?>
 			</td>
 		</tr>
 		</tbody>
+
+		<thead>
+		<tr>
+			<th colspan="4"><?php _e('GeoLocation (Used in groups only)', 'adrotate'); ?></th>
+		</tr>
+		</thead>
+			
+		<tbody>
+	    <tr>
+			<th valign="top"><?php _e('Cities:', 'adrotate'); ?></strong></th>
+			<td colspan="3"><textarea name="adrotate_geo_cities" cols="65" rows="3" disabled>New York, Amsterdam, Shanghai</textarea></td>
+		</tr>
+	    <tr>
+			<th valign="top"><?php _e('Countries:', 'adrotate'); ?></strong></th>
+	        <td colspan="3">
+	        	<p><em>Decide where your adverts show with targeted adverts. Check up on your visitors, have AdRotate see where they're from and show adverts that apply to them!<br />AdRotate Pro uses geoPlugin, which includes GeoLite data created by MaxMind, available from <a href="http://www.maxmind.com" target="_blank">maxmind.com</a>.</em></p>	        	
+	        </td>
+		</tr>
+		</tbody>
 	
+		<thead>
+		<tr>
+			<th colspan="4" bgcolor="#DDD"><?php _e('Advertiser & Budget', 'adrotate'); ?> (<?php adrotate_pro_notice('t'); ?>)</th>
+		</tr>
+		</thead>
+
+		<tbody>
+      	<tr>
+	        <th valign="top">&nbsp;</th>
+	        <td colspan="3">
+	        	<p><em>Couple adverts to users. Assign going rates per click or impression and offer your advertisers insight in their stats!</em></p>	        	
+			</td>
+      	</tr>
+      	</tbody>
+
+		<thead>
+		<tr>
+			<th colspan="4"><?php _e('Usage', 'adrotate'); ?></th>
+		</tr>
+		</thead>
+
+		<tbody>
+      	<tr>
+	        <th><?php _e('In a post or page:', 'adrotate'); ?></th>
+	        <td><p>[adrotate banner="<?php echo $edit_banner->id; ?>"]</p></td>
+	        <th><?php _e('Directly in a theme:', 'adrotate'); ?></th>
+	        <td><p>&lt;?php echo adrotate_ad(<?php echo $edit_banner->id; ?>); ?&gt;</p></td>
+      	</tr>
+      	</tbody>
+
 	</table>
 
 	<p class="submit">
@@ -298,12 +302,12 @@ jQuery(document).ready(function() {
 		<a href="admin.php?page=adrotate-ads&view=manage" class="button"><?php _e('Cancel', 'adrotate'); ?></a>
 	</p>
 
-	<h3><?php _e('Schedules', 'adrotate'); ?></h3>
+	<h3><?php _e('Schedule', 'adrotate'); ?></h3>
 
 	<table class="widefat" style="margin-top: .5em">
 		<thead>
 		<tr>
-			<th colspan="4"><?php _e('Add new schedules', 'adrotate'); ?></th>
+			<th colspan="4"><?php _e('From when to when is the advert visible', 'adrotate'); ?></th>
 		</tr>
 		</thead>
 
@@ -316,8 +320,8 @@ jQuery(document).ready(function() {
 	        <th><?php _e('Start date (day/month/year):', 'adrotate'); ?></th>
 	        <td>
 	        	<label for="adrotate_sday">
-	        	<input tabindex="21" name="adrotate_sday" class="search-input" type="text" size="4" maxlength="2" value="<?php echo $sday;?>" /> /
-				<select tabindex="22" name="adrotate_smonth">
+	        	<input tabindex="11" name="adrotate_sday" class="search-input" type="text" size="4" maxlength="2" value="<?php echo $sday;?>" /> /
+				<select tabindex="12" name="adrotate_smonth">
 					<option value="01" <?php if($smonth == "01") { echo 'selected'; } ?>><?php _e('January', 'adrotate'); ?></option>
 					<option value="02" <?php if($smonth == "02") { echo 'selected'; } ?>><?php _e('February', 'adrotate'); ?></option>
 					<option value="03" <?php if($smonth == "03") { echo 'selected'; } ?>><?php _e('March', 'adrotate'); ?></option>
@@ -331,14 +335,14 @@ jQuery(document).ready(function() {
 					<option value="11" <?php if($smonth == "11") { echo 'selected'; } ?>><?php _e('November', 'adrotate'); ?></option>
 					<option value="12" <?php if($smonth == "12") { echo 'selected'; } ?>><?php _e('December', 'adrotate'); ?></option>
 				</select> /
-				<input tabindex="23" name="adrotate_syear" class="search-input" type="text" size="4" maxlength="4" value="<?php echo $syear;?>" />&nbsp;&nbsp;&nbsp; 
+				<input tabindex="13" name="adrotate_syear" class="search-input" type="text" size="4" maxlength="4" value="<?php echo $syear;?>" />&nbsp;&nbsp;&nbsp; 
 				</label>
 	        </td>
 	        <th><?php _e('End date (day/month/year):', 'adrotate'); ?></th>
 	        <td>
 	        	<label for="adrotate_eday">
-	        	<input tabindex="24" name="adrotate_eday" class="search-input" type="text" size="4" maxlength="2" value="<?php echo $eday;?>"  /> /
-				<select tabindex="25" name="adrotate_emonth">
+	        	<input tabindex="14" name="adrotate_eday" class="search-input" type="text" size="4" maxlength="2" value="<?php echo $eday;?>"  /> /
+				<select tabindex="15" name="adrotate_emonth">
 					<option value="01" <?php if($emonth == "01") { echo 'selected'; } ?>><?php _e('January', 'adrotate'); ?></option>
 					<option value="02" <?php if($emonth == "02") { echo 'selected'; } ?>><?php _e('February', 'adrotate'); ?></option>
 					<option value="03" <?php if($emonth == "03") { echo 'selected'; } ?>><?php _e('March', 'adrotate'); ?></option>
@@ -352,7 +356,7 @@ jQuery(document).ready(function() {
 					<option value="11" <?php if($emonth == "11") { echo 'selected'; } ?>><?php _e('November', 'adrotate'); ?></option>
 					<option value="12" <?php if($emonth == "12") { echo 'selected'; } ?>><?php _e('December', 'adrotate'); ?></option>
 				</select> /
-				<input tabindex="26" name="adrotate_eyear" class="search-input" type="text" size="4" maxlength="4" value="<?php echo $eyear;?>" />&nbsp;&nbsp;&nbsp; 
+				<input tabindex="16" name="adrotate_eyear" class="search-input" type="text" size="4" maxlength="4" value="<?php echo $eyear;?>" />&nbsp;&nbsp;&nbsp; 
 				</label>
 			</td>
       	</tr>	
@@ -360,15 +364,15 @@ jQuery(document).ready(function() {
 	        <th><?php _e('Start time (hh:mm):', 'adrotate'); ?></th>
 	        <td>
 	        	<label for="adrotate_sday">
-				<input tabindex="27" name="adrotate_shour" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $shour;?>" /> :
-				<input tabindex="28" name="adrotate_sminute" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $sminute;?>" />
+				<input tabindex="17" name="adrotate_shour" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $shour;?>" /> :
+				<input tabindex="18" name="adrotate_sminute" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $sminute;?>" />
 				</label>
 	        </td>
 	        <th><?php _e('End time (hh:mm):', 'adrotate'); ?></th>
 	        <td>
 	        	<label for="adrotate_eday">
-				<input tabindex="29" name="adrotate_ehour" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $ehour;?>" /> :
-				<input tabindex="30" name="adrotate_eminute" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $eminute;?>" />
+				<input tabindex="19" name="adrotate_ehour" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $ehour;?>" /> :
+				<input tabindex="20" name="adrotate_eminute" class="search-input" type="text" size="2" maxlength="4" value="<?php echo $eminute;?>" />
 				</label>
 			</td>
       	</tr>	
@@ -388,42 +392,75 @@ jQuery(document).ready(function() {
 	<table class="widefat" style="margin-top: .5em">
 		<thead>
 		<tr>
+      		<th width="2%">&nbsp;</th>
 	        <th width="20%"><?php _e('From', 'adrotate'); ?></th>
 	        <th><?php _e('Until', 'adrotate'); ?></th>
-	        <th width="10%"><center><?php _e('Clicks', 'adrotate'); ?></center></th>
-	        <th width="10%"><center><?php _e('Impressions', 'adrotate'); ?></center></th>
+	        <th width="10%"><center><?php _e('Max Clicks', 'adrotate'); ?></center></th>
+	        <th width="10%"><center><?php _e('Used', 'adrotate'); ?></center></th>
+	        <th width="10%"><center><?php _e('Max Impressions', 'adrotate'); ?></center></th>
+	        <th width="10%"><center><?php _e('Used', 'adrotate'); ?></center></th>
 		</tr>
 		</thead>
 
 		<tbody>
-      	<tr id='schedule-<?php echo $schedule->id; ?>' class=' <?php echo $class; ?>'>
-	        <td colspan="4">
-	        	<p><?php adrotate_pro_notice(); ?></p>
-	        	<p><em>Get more in-depth and give adverts multiple schedules. More control over when and how adverts show up.</em></p>
-	        </td>
+		<tr id="schedule-0">
+      		<th><input type="checkbox" disabled value="0"></th>
+      		<td>January 01, 2011 - 00:00</td><td>February 01, 2013 - 00:00</td><td><center>unlimited</center></td><td><center>4</center></td><td><center>unlimited</center></td><td><center>893</center></td>
+      	</tr>
+		<tr id="schedule-0">
+      		<th><input type="checkbox" disabled value="0"></th>
+      		<td>April 05, 2013 - 00:00</td><td>January 01, 2014 - 00:00</td><td><center>2200</center></td><td><center>1540</center></td><td><center>1000000</center></td><td><center>826374</center></td>
       	</tr>
 		</tbody>
+
+		<thead>
+      	<tr>
+      		<th colspan="7"><em><?php adrotate_pro_notice(); ?></th>
+      	</tr>
+		</thead>
 
 	</table>
 
 	<?php if($adrotate_config['enable_stats'] == 'Y') { ?>
 	<h3><?php _e('Timeframe', 'adrotate'); ?></h3>
 
-	<table class="widefat" style="margin-top: .5em">
+ 	<table class="widefat" style="margin-top: .5em">
 		<thead>
 		<tr>
-			<th colspan="4"><?php _e('Timeframe', 'adrotate'); ?></th>
+			<th colspan="4"><?php _e('Timeframe (Optional)', 'adrotate'); ?></th>
 		</tr>
 		</thead>
 
 		<tbody>
       	<tr>
-	        <td colspan="4">
-	        	<p><?php adrotate_pro_notice(); ?></p>
-	        	<p><em>Give adverts an alotted time per day/week and a maximum amount of clicks or impressions over that period.</em></p>
+      		<th>Important:</th>
+	        <td colspan="3"><em><?php _e('Set a click or impression limit on any given day, week or month. This option overrules any other click or impression limit as long as the ad is within a valid schedule.', 'adrotate'); ?></em></td>
+		</tr>
+      	<tr>
+	        <th><?php _e('Timeframe:', 'adrotate'); ?></th>
+	        <td colspan="3">
+		        <input name="adrotate_timeframelength" type="text" size="5" class="search-input" value="" disabled /> <select name="adrotate_timeframe" disabled>
+					<option value="">No limits</option>
+				</select>
+	        </td>
+      	</tr>
+      	<tr>
+	        <th><?php _e('Maximum clicks:', 'adrotate'); ?></th>
+	        <td>
+		        <label for="adrotate_timeframeclicks"></label><input name="adrotate_timeframeclicks" type="text" size="5" class="search-input" disabled value="0" /> <em><?php _e('Leave empty or 0 to skip this.', 'adrotate'); ?></em></label>
+	        </td>
+	        <th valign="top"><?php _e('Maximum impressions:', 'adrotate'); ?></th>
+	        <td>
+		        <label for="adrotate_timeframeimpressions"><input name="adrotate_timeframeimpressions" type="text" size="5" class="search-input" disabled value="0" /> <em><?php _e('Leave empty or 0 to skip this.', 'adrotate'); ?></em></label>
 	        </td>
       	</tr>
 		</tbody>					
+
+		<thead>
+      	<tr>
+      		<th colspan="4"><em><?php adrotate_pro_notice(); ?></th>
+      	</tr>
+		</thead>
 	</table>
 	<?php } ?>
 

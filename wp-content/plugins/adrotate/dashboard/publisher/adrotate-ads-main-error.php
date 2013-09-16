@@ -50,7 +50,7 @@ Copyright 2010-2013 Arnan de Gans - AJdG Solutions (email : info@ajdg.net)
 			$errorclass = '';
 			if($errbanner['type'] == 'error') $errorclass = ' row_error'; 
 			if($errbanner['type'] == 'expired') $errorclass = ' row_inactive';
-			if($errbanner['type'] == 'expiring') $errorclass = ' row_urgent';
+			if($errbanner['type'] == '2days') $errorclass = ' row_urgent';
 			?>
 		    <tr id='adrotateindex' class='<?php echo $errorclass; ?>'>
 				<th class="check-column"><input type="checkbox" name="errorbannercheck[]" value="<?php echo $errbanner['id']; ?>" /></th>

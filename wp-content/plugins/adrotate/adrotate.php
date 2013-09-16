@@ -4,7 +4,7 @@ Plugin Name: AdRotate
 Plugin URI: http://www.adrotateplugin.com
 Description: The very best and most convenient way to publish your ads.
 Author: Arnan de Gans of AJdG Solutions
-Version: 3.8.6.2
+Version: 3.8.8
 Author URI: http://www.ajdg.net
 License: GPLv3
 */
@@ -15,19 +15,20 @@ Copyright 2010-2013 Arnan de Gans - AJdG Solutions (email : info@ajdg.net)
 
 /*--- AdRotate values ---------------------------------------*/
 define("ADROTATE_BETA", '');
-define("ADROTATE_DISPLAY", '3.8.6.2'.ADROTATE_BETA);
+define("ADROTATE_DISPLAY", '3.8.8'.ADROTATE_BETA);
 define("ADROTATE_VERSION", 367);
-define("ADROTATE_DB_VERSION", 33);
+define("ADROTATE_DB_VERSION", 34);
+define("ADROTATE_FOLDER", 'adrotate');
 /*-----------------------------------------------------------*/
 
 /*--- Load Files --------------------------------------------*/
-include_once(WP_CONTENT_DIR.'/plugins/adrotate/adrotate-setup.php');
-include_once(WP_CONTENT_DIR.'/plugins/adrotate/adrotate-manage-publisher.php');
-include_once(WP_CONTENT_DIR.'/plugins/adrotate/adrotate-functions.php');
-include_once(WP_CONTENT_DIR.'/plugins/adrotate/adrotate-statistics.php');
-include_once(WP_CONTENT_DIR.'/plugins/adrotate/adrotate-output.php');
-include_once(WP_CONTENT_DIR.'/plugins/adrotate/adrotate-widget.php');
-if(is_admin()) include_once(WP_CONTENT_DIR.'/plugins/adrotate/library/broadstreet/lib/Utility.php');
+include_once(WP_CONTENT_DIR.'/plugins/'.ADROTATE_FOLDER.'/adrotate-setup.php');
+include_once(WP_CONTENT_DIR.'/plugins/'.ADROTATE_FOLDER.'/adrotate-manage-publisher.php');
+include_once(WP_CONTENT_DIR.'/plugins/'.ADROTATE_FOLDER.'/adrotate-functions.php');
+include_once(WP_CONTENT_DIR.'/plugins/'.ADROTATE_FOLDER.'/adrotate-statistics.php');
+include_once(WP_CONTENT_DIR.'/plugins/'.ADROTATE_FOLDER.'/adrotate-output.php');
+include_once(WP_CONTENT_DIR.'/plugins/'.ADROTATE_FOLDER.'/adrotate-widget.php');
+if(is_admin()) include_once(WP_CONTENT_DIR.'/plugins/'.ADROTATE_FOLDER.'/library/broadstreet/lib/Utility.php');
 // wp-content/plugins/adrotate/adrotate-out.php
 /*-----------------------------------------------------------*/
 
@@ -142,9 +143,9 @@ function adrotate_manage() {
 	global $wpdb, $current_user, $userdata, $adrotate_config, $adrotate_debug;
 
 	$message = $view = $ad_edit_id = '';
-	if(isset($_GET['message'])) $message = $_GET['message'];
-	if(isset($_GET['view'])) $view = $_GET['view'];
-	if(isset($_GET['ad'])) $ad_edit_id = $_GET['ad'];
+	if(isset($_GET['message'])) $message = esc_attr($_GET['message']);
+	if(isset($_GET['view'])) $view = esc_attr($_GET['view']);
+	if(isset($_GET['ad'])) $ad_edit_id = esc_attr($_GET['ad']);
 	$now 			= adrotate_now();
 	$today 			= adrotate_date_start('day');
 	$in2days 		= $now + 172800;
@@ -152,8 +153,8 @@ function adrotate_manage() {
 	$in84days 		= $now + 7257600;
 
 	if(isset($_GET['month']) AND isset($_GET['year'])) {
-		$month = $_GET['month'];
-		$year = $_GET['year'];
+		$month = esc_attr($_GET['month']);
+		$year = esc_attr($_GET['year']);
 	} else {
 		$month = date("m");
 		$year = date("Y");
@@ -305,13 +306,13 @@ function adrotate_manage_group() {
 	global $wpdb, $adrotate_debug;
 
 	$message = $view = $group_edit_id = '';
-	if(isset($_GET['message'])) $message = $_GET['message'];
-	if(isset($_GET['view'])) $view = $_GET['view'];
-	if(isset($_GET['group'])) $group_edit_id = $_GET['group'];
+	if(isset($_GET['message'])) $message = esc_attr($_GET['message']);
+	if(isset($_GET['view'])) $view = esc_attr($_GET['view']);
+	if(isset($_GET['group'])) $group_edit_id = esc_attr($_GET['group']);
 
 	if(isset($_GET['month']) AND isset($_GET['year'])) {
-		$month = $_GET['month'];
-		$year = $_GET['year'];
+		$month = esc_attr($_GET['month']);
+		$year = esc_attr($_GET['year']);
 	} else {
 		$month = date("m");
 		$year = date("Y");
@@ -388,13 +389,13 @@ function adrotate_manage_block() {
 	global $wpdb, $adrotate_debug;
 
 	$message = $view = $block_edit_id = '';
-	if(isset($_GET['message'])) $message = $_GET['message'];
-	if(isset($_GET['view'])) $view = $_GET['view'];
-	if(isset($_GET['block'])) $block_edit_id = $_GET['block'];
+	if(isset($_GET['message'])) $message = esc_attr($_GET['message']);
+	if(isset($_GET['view'])) $view = esc_attr($_GET['view']);
+	if(isset($_GET['block'])) $block_edit_id = esc_attr($_GET['block']);
 
 	if(isset($_GET['month']) AND isset($_GET['year'])) {
-		$month = $_GET['month'];
-		$year = $_GET['year'];
+		$month = esc_attr($_GET['month']);
+		$year = esc_attr($_GET['year']);
 	} else {
 		$month = date("m");
 		$year = date("Y");
@@ -559,7 +560,7 @@ function adrotate_options() {
 	$advertiser_mails	= implode(', ', $adrotate_config['advertiser_email']);
 
 	$message = $corrected = $converted = '';
-	if(isset($_GET['message'])) $message = $_GET['message'];
+	if(isset($_GET['message'])) $message = esc_attr($_GET['message']);
 
 	$converted = base64_decode($converted);
 	$adschedule = wp_next_scheduled('adrotate_ad_notification');
@@ -844,11 +845,25 @@ function adrotate_options() {
 				<td><span class="description"><?php adrotate_pro_notice(); ?></span></td>
 			</tr>
 			<tr>
-				<th valign="top"><?php _e('GeoLocation', 'adrotate'); ?></th>
+				<th valign="top"><?php _e('Geographic Tracking', 'adrotate'); ?></th>
 				<td>
-					<input type="checkbox" name="adrotate_enable_geo" disabled /> <?php _e('Enable GeoLocation for adverts.', 'adrotate'); ?><br />
-					<input type="checkbox" name="adrotate_enable_geo_advertisers" disabled /> <?php _e('Allow advertisers to specify where their ads will show.', 'adrotate'); ?><br />
-					<span class="description"><?php _e('Using GeoLocation requires a free account from', 'adrotate'); ?> <a href="http://www.geoplugin.com" target="_blank">geoPlugin</a>.<br />geoPlugin includes GeoLite data created by MaxMind, available from <a href="http://www.maxmind.com" target="_blank">maxmind.com</a>.</span>
+			        <select tabindex="3" name="adrotate_enable_geo" disabled>
+						<option value="0"><?php _e('Disabled', 'adrotate'); ?></option>
+					</select> <?php _e('Enable GeoLocation for adverts.', 'adrotate'); ?><br />
+					<span class="description"><?php _e('Consider making a donation to', 'adrotate'); ?> <a href="http://www.freegeoip.net" target="_blank">Freegeoip</a> <?php _e('to keep their services free and awesome!', 'adrotate'); ?><br /><?php _e('Using the geoPlugin option requires a free account from', 'adrotate'); ?> <a href="http://www.geoplugin.com" target="_blank">geoPlugin</a>.<br />Postional data includes GeoLite data created by MaxMind, available from <a href="http://www.maxmind.com" target="_blank">maxmind.com</a>.</span>
+				</td>
+			</tr>
+			<tr>
+				<th valign="top"><?php _e('Advertisers', 'adrotate'); ?></th>
+				<td>
+					<input type="checkbox" name="adrotate_enable_geo_advertisers" disabled /> <?php _e('Allow advertisers to specify where their ads will show.', 'adrotate'); ?>
+				</td>
+			</tr>
+			<tr>
+				<th valign="top"><?php _e('geoPlugin Key', 'adrotate'); ?></th>
+				<td>
+					<input name="adrotate_geoplugin_key" type="text" class="search-input" size="50" value="" autocomplete="off" disabled /><br />
+					<span class="description"><?php _e('Fill in your activation/verification key from geoPlugin here', 'adrotate'); ?>.</span>
 				</td>
 			</tr>
 			
@@ -870,10 +885,6 @@ function adrotate_options() {
 			<tr>
 				<th valign="top"><?php _e('Include jQuery', 'adrotate'); ?></th>
 				<td><input type="checkbox" name="adrotate_jquery" <?php if($adrotate_config['jquery'] == 'Y') { ?>checked="checked" <?php } ?> /> <span class="description"><?php _e('jQuery is required for Dynamic Groups. Enable if your theme does not load it already.', 'adrotate'); ?></span></td>
-			</tr>
-			<tr>
-				<th valign="top"><?php _e('Include jQuery Tools', 'adrotate'); ?></th>
-				<td><input type="checkbox" name="adrotate_jtools" <?php if($adrotate_config['jtools'] == 'Y') { ?>checked="checked" <?php } ?> /> <span class="description"><?php _e('The jQuery Tools Library (1.2.7+) is required for Dynamic Groups. Disable if other plugins or themes already load this.', 'adrotate'); ?></span></td>
 			</tr>
 			<tr>
 				<th valign="top"><?php _e('Include jQuery ShowOff', 'adrotate'); ?></th>
@@ -991,7 +1002,7 @@ function adrotate_beta() {
 	global $wpdb, $current_user;
 	
 	$message = '';
-	if(isset($_GET['message'])) $message = $_GET['message'];
+	if(isset($_GET['message'])) $message = esc_attr($_GET['message']);
 ?>
 	<div class="wrap">
 
