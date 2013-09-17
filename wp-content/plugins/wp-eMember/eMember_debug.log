@@ -1,1 +1,8 @@
 [09/15/2013 10:08 PM] - SUCCESS :Emember Logged out.
+[09/16/2013 7:27 PM] - SUCCESS :Authenticating login request for username: murphy. Request came from IP Address: 192.168.1.114
+[09/16/2013 7:27 PM] - SUCCESS :Emember: trying logging in :murphy
+[09/16/2013 7:27 PM] - SUCCESS :Authentication completed for username: murphy. IP Address: 192.168.1.114
+[09/16/2013 7:27 PM] - SUCCESS :Logging into WordPress account. User ID: 10736
+[09/16/2013 7:27 PM] - SUCCESS :Emember: trying logging in :murphy
+[09/16/2013 7:27 PM] - SUCCESS :Redirecting member to the after login redirection page.
+[09/16/2013 7:33 PM] - SUCCESS :Emember Logged out.

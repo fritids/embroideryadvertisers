@@ -2,13 +2,15 @@
 /*
 Plugin Name: M7 Customize
 Plugin URI: http://mach7enterprises.com
-Description: Customizing items over wordpress.
+Description: Customizing items over wordpress. This starts as a blank plugin with just the basics. Plugin is specific to each site it runs on.
 Version: 0.1
 Author: Tyson Brooks
 Author URI: http://mach7enterprises.com
 */
 //$current_user = wp_get_current_user(); $username = $current_user->user_login; $useremail = $current_user->user_email; $firstname = $current_user->user_firstname; $lastname = $current_user->user_lastname; $displayname = $current_user->display_name; $userid = $current_user->ID; $role=get_user_role($userid);
 
+
+// Get Current User Role
 function get_user_role($uid) {
 		global $wpdb;
 		$role = $wpdb->get_var("SELECT meta_value FROM {$wpdb->usermeta} WHERE meta_key = 'wp_capabilities' AND user_id = {$uid}");
@@ -18,6 +20,8 @@ function get_user_role($uid) {
 			return $roles[0];
 }
 
+
+// Replace that annoying Howdy!
 function replace_howdy( $wp_admin_bar ) {
  $my_account=$wp_admin_bar->get_node('my-account');
  $newtitle = str_replace( 'Howdy,', 'Hello, ', $my_account->title );
@@ -28,6 +32,8 @@ function replace_howdy( $wp_admin_bar ) {
  }
  add_filter( 'admin_bar_menu', 'replace_howdy',25 );
 
+ 
+// Remove stuff from the admin bar.
 function m71_remove_admin_stuff() {
 	$current_user = wp_get_current_user(); $userid = $current_user->ID; $role=get_user_role($userid);
 
@@ -41,24 +47,16 @@ function m71_remove_admin_stuff() {
 	if ($role == 'subscriber' || $role == 'chatroom_moderator') {
 		$wp_admin_bar->remove_node( 'new-post' );
 	}
-if ($role=='subscriber') {
-add_action('after_setup_theme', 'remove_admin_bar');
-function remove_admin_bar() {
-show_admin_bar(false);
-}
-
-	?>
-	<script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $('#wp-admin-bar-site-name > a').text('Back to <? echo get_bloginfo('sitename');?>');
-        });
-    </script>
-	<?
+if ($role!='administrator') {
+		add_action('after_setup_theme', 'remove_admin_bar');
+			function remove_admin_bar() {
+				show_admin_bar(false);
+			}
 	}
 }
 add_action( 'wp_before_admin_bar_render', 'm71_remove_admin_stuff' );
 
-
+// Show Author only their posts & media in media manager.
 function posts_for_current_author($query) {
 	$current_user = wp_get_current_user(); $userid = $current_user->ID; $role=get_user_role($userid);
 	if ($role!='administrator') {
@@ -74,22 +72,8 @@ function posts_for_current_author($query) {
 }
 add_filter('pre_get_posts', 'posts_for_current_author');
 
-/*
-add_action( 'init', 'create_post_type' );
-function create_post_type() {
-	register_post_type( 'craft_project',
-		array(
-			'labels' => array(
-				'name' => __( 'Craft Projects' ),
-				'singular_name' => __( 'Craft Project' ),
-				'menu_position' => '5'
-			),
-		'public' => true,
-		'has_archive' => true,
-		)
-	);
-}
-*/
+
+// Change the title of Posts to Advertisments
 function change_post_menu_label() {
 global $menu;
 global $submenu;
@@ -117,24 +101,7 @@ add_action( 'init', 'change_post_object_label' );
 add_action( 'admin_menu', 'change_post_menu_label' );
 
 
-
-
-/*
-function m7_remove_admin_stuff() {
-	$current_user = wp_get_current_user(); $userid = $current_user->ID; $role=get_user_role($userid);
-	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('wp-logo');
-//	$wp_admin_bar->remove_menu('view-site');
-//	$wp_admin_bar->remove_menu('updates');
-//	$wp_admin_bar->remove_menu('comments');
-	if ($role == 'subscriber' || $role == 'chatroom_moderator') {
-	$wp_admin_bar->remove_node( 'new-post' );
-	}
-}
-add_action( 'wp_before_admin_bar_render', 'm7_remove_admin_stuff' );
-*/
-
-//adminbar//
+// Change lable of Posts in admin bar to Advertisements
 function change_post_admin_bar_label() {
     ?>
     <script type="text/javascript">
@@ -146,40 +113,34 @@ function change_post_admin_bar_label() {
 }
 add_action( 'wp_after_admin_bar_render', 'change_post_admin_bar_label' );
 
-
- function m7_remove_menu_pages() {
+// Remove pages from menu - by role
+function m7_remove_menu_pages() {
 	$current_user = wp_get_current_user(); $userid = $current_user->ID; $role=get_user_role($userid);
-	//remove_submenu_page('index.php', 'update-core.php');
 	if ($role == 'subscriber' || $role == 'chatroom_moderator') {
 	remove_menu_page('edit.php');
-	//remove_menu_page('edit.php?post_type=craft_blog');
 	}
 }
 add_action( 'admin_menu', 'm7_remove_menu_pages' ); 
   
-add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets'); 
+  
+// Add Custom Dashboard Widget to Dashboard
 function my_custom_dashboard_widgets() { 
 
 global $wp_meta_boxes; 
-wp_add_dashboard_widget('custom_help_widget', 'Welcome to Embroidery Advertisers', 'custom_dashboard_help');
-//wp_add_dashboard_widget('custom_chat_widget', 'Embroidery Advertisers Chat', 'custom_dashboard_chat'); 
-} 
+
+}
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets'); 
+
 function custom_dashboard_help() { 
 	$current_user = wp_get_current_user(); $userid = $current_user->ID; $role=get_user_role($userid);
 
 echo '<p>Welcome to Embroidery Advertisers!<br/>If you need any help please feel free to email me, contact@embroideryadvertisers.com<br/>';
 echo 'Dont forget to join us in our live chat room! You can find it under Members Area on the front page.';
-//echo '<br/><br/>role: '.$role;
+
 echo '</p>'; 
 }
-/*
-function custom_dashboard_chat() { 
-	$current_user = wp_get_current_user(); $username = $current_user->user_login;
 
-echo '<iframe src="http://lightirc.com/start/?host=irc.mach7enterprises.com&autojoin=%23embroideryadvertisers%2C%23ea-mods&showServerWindow=false&styleURL=css%2Flightblue.css&nick='.$username.'&policyPort=9024" style="width:800px; height:400px;"></iframe>'; 
-}*/
-
-// Admin footer modification
+// Admin footer modification - Remove powered by Wordpress
 function m7_remove_footer_admin() {
     echo '<span id="footer-thankyou">Developed by <a href="http://mach7enterprises.com" target="_blank">Mach7 Enterprises</a></span>';
 	
@@ -187,39 +148,30 @@ function m7_remove_footer_admin() {
 add_filter('admin_footer_text', 'm7_remove_footer_admin');
 
 
+// Remove boxes from posts menu
 
-add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
-add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
+function filterPosts() { 
+$current_user = wp_get_current_user(); $userid = $current_user->ID; $role=get_user_role($userid);
 
-function my_show_extra_profile_fields( $user ) { 
-	$current_user = wp_get_current_user(); if (empty($_GET['user_id'])) {$userid = $current_user->ID; } else { $userid=$_GET['user_id'];} $role=get_user_role($userid);
-	if ($role == 'administrator' || $role == 'chatroom_moderator') {
-?>
-	<h3>Extra profile information</h3>
-	<table class="form-table">
-		<tr>
-			<th><label for="chatpass">Chat Password</label></th>
-			<td>
-				<input type="text" name="chatpass" id="chatpass" value="<?php echo esc_attr( get_the_author_meta( 'chatpass', $user->ID ) ); ?>" class="regular-text" readonly /><br />
-				<span class="description">This is your chat password. (Automatically generated by your website password.)</span>
-			</td>
-		</tr>
-	</table>
-<?php }}
-add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
-add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
-
-function my_save_extra_profile_fields( $user_id ) {
-
-	if ( !current_user_can( 'edit_user', $user_id ) )
-		return false;
-	if (!empty($_POST['pass1'])) { $pass=$_POST['pass1'];} else { $pass='';}
-	/* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
-	update_usermeta( $user_id, 'chatpass', $pass );
+if ($role!='administrator') {
+	?>
+	<style type="text/css">
+	/**** Hides Menu Items ****/
+	#menu-dashboard {
+	display:none;
+	}
+	/**** Hides boxes in Post Menu ******/
+	#wpac_controls_meta, #formatdiv, #categorydiv, #graphene_custom_meta, #expirationdatediv, #postimagediv, #eMember_sectionid, #page-links-to, #tagsdiv-post_tag  {
+	display:none;
+	}
+	
+	/**** Hides buttons in Posts box *******/
+	#content_insertdate, #content_inserttime, #content_anchor, #content_wpEstoreButton, #content_wp_help {
+	display:none;
+	}
+	</style>
+<? }
 }
+add_action('admin_footer_text','filterPosts');
 
 
-function allowAuthorEditing(){
-  add_post_type_support( 'craft_project', 'author' );
-}
-add_action('init','allowAuthorEditing');
